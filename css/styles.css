@@ -7,3 +7,171 @@ font-family: "Champagne & Limousines", sans-serif;
 :root {
     --bs-body-font-family: "Raleway", sans-serif;
 }
+
+body {
+    display: flex;
+    flex-direction: column;
+    /* min-height: 300vh; */
+    margin: 0;
+}
+
+header {
+    position: sticky;
+    background-color: white;
+    top: 0;
+}
+
+main {
+    flex: 1;
+    padding: 20px;
+}
+
+footer {
+    padding: 10px;
+    text-align: center;
+    color: white;
+    background-color: #3D518C;
+    padding: 40px 0;
+}
+
+.icon {
+    width: 30px;
+    padding-right: 5px;
+}
+
+.nav-link {
+    color: #393E51;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.btn-primary {
+    background-color: #3D518C; 
+    border: none;
+}
+
+/* header */
+.logo {
+    max-width: 70px;
+    margin-right: 10px;
+}
+
+@media (min-width: 768px) {
+    .logo {
+        max-width: 100px;
+    }
+}
+
+.dropdown-menu {
+    border: none;
+    outline: none;
+}
+
+.search-input-wrapper {
+    position: relative;
+    width: fit-content;
+}
+
+.search-input {
+    width: 600px;
+    padding: 11px;
+}
+
+.search-icon {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.navbar-toggler {
+    background-color: white;
+}
+
+.navbar-toggler:hover,
+.navbar-toggler:active,
+.navbar-toggler:focus-visible,
+.navbar-toggler:focus {
+    border: none;
+    outline: none;
+    background-color: white!important;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='%233D518C' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+.search-icon img {
+    width: 20px;
+    height: 20px;
+}
+
+.static-dropdown {
+    display: none; /* Скрываем меню по умолчанию */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.static-dropdown.show {
+    display: block; /* Показываем меню при активации */
+}
+
+.footer {
+    background-color:  #3D518C; /* Example background color */
+    color: white; /* Text color */
+    padding: 20px 0; /* Padding for the footer */
+}
+
+.footer .row {
+    margin: 0; /* Remove default margin */
+}
+
+.footer .col {
+    padding: 10px; /* Padding for each column */
+}
+
+.footer h6 {
+    font-size: 1rem; /* Font size for headings */
+    margin-bottom: 10px; /* Space below headings */
+}
+
+.footer ul {
+    padding-left: 0; /* Remove default padding */
+    list-style: none; /* Remove bullet points */
+}
+
+.footer ul li {
+    font-size: 0.9rem; /* Font size for list items */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .footer .row {
+        flex-direction: column; /* Stack columns vertically */
+        align-items: center; /* Center align items */
+        text-align: center; /* Center align text */
+    }
+
+    .footer .col {
+        text-align: center; /* Center text for smaller screens */
+    }
+
+    .footer h6 {
+        
+        text-align: center; /* Center align headings */
+        font-size: 1.2rem; /* Increase heading size on smaller screens */
+    }
+
+    .footer ul li {
+        text-align: center; /* Center align list items */
+        font-size: 1rem; /* Increase list item size on smaller screens */
+    }
+}
