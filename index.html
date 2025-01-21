@@ -20,16 +20,172 @@
 </head>
 <body>
     <div class="wrapper">
-        <header class="header">
-            <div class="container">Шапка сайта</div>
+        <div class="container-xl d-none d-lg-block">
+            <div class="py-3 d-flex justify-content-between flex-column-reverse flex-lg-row">
+                <div class="d-flex flex-column flex-lg-row">
+                    <div>
+                        <img class="icon" src="./assets/icons/location.svg" alt="location">
+                        <span class="pe-3">г. Екатеринбург</span>
+                    </div>
+                    <div>
+                        <img class="icon" src="./assets/icons/call.svg" alt="call">
+                        <span>+7 (922) 181 36 75</span>
+                        <span class="text-muted">(10:00–23:00)</span>
+                    </div>
+                </div>
+                <nav class="nav">
+                    <a class="nav-link" href="#">Оплата и доставка</a>
+                    <a class="nav-link" href="#">О компании</a>
+                    <a class="nav-link" href="#">Контакты</a>
+                    <a class="nav-link" href="#">Статьи</a>
+                </nav>
+            </div>
+        </div>
+
+         <header class="header container-xl">
+            <nav class="navbar navbar-expand-lg">
+                <div class="d-flex align-items-center">
+                    <button class="navbar-toggler btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu" aria-controls="offcanvasMenu" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <img class="logo" src="./assets/images/logo.png" alt="Logo">
+                </div>
+                <div class="collapse navbar-collapse me-auto" id="navbarSupportedContent">
+                    <ul class="navbar-nav mb-2 mb-lg-0">
+                        <li class="nav-item dropdown">
+                            <a class="btn btn-primary btn-lg dropdown-toggle mx-3 px-4" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Каталог
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item fs-6 text-muted" href="#">Собственное производство</a></li>
+                                <li><a class="dropdown-item fs-6 text-muted" href="#">Икра красная </a></li>
+                                <li><a class="dropdown-item fs-6 text-muted" href="#">Консервация и деликатесы </a></li>
+                                <li><a class="dropdown-item fs-6 text-muted" href="#">Мясо, птица</a></li>
+                                <li><a class="dropdown-item fs-6 text-muted" href="#">Рыба</a></li>
+                                <li><a class="dropdown-item fs-6 text-muted" href="#">Морепродукты</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <form class="search-input-wrapper d-flex" role="search">
+                        <input class="search-input form-control me-2" type="search" placeholder="Найти товар" aria-label="Search">
+                        <button class="search-icon pb-2" type="submit">
+                            <img src="./assets/icons/search-01.svg" alt="Search">
+                        </button>
+                    </form>
+                </div>
+                <div class="header-icons">
+                    <img class="icon me-3" src="./assets/icons/chevron-forward.svg" alt="Chevron Forward">
+                    <img class="icon" src="./assets/icons/favourite.svg" alt="Favourite">
+                </div>
+            </nav>
         </header>
 
         <main class="main">
-            <div class="container">Главная страница</div>
+            <div class="container">
+                <!-- <section class="recipes">
+                    <div class="section-navigation">
+                        <h2 class="section-navigation__title">Рецепты</h2>
+                        <div class="section-navigation__controles">
+                            <a class="section-navigation__controles-btn section-navigation__controles-btn-none"><img src="./assets/images/header/button-arrow-back.svg" alt="button-arrow-back"></a>
+                            <a class="section-navigation__controles-btn section-navigation__controles-btn-none"><img src="./assets/images/header/button-arrow.svg" alt="button-arrow"></a>
+                        </div>
+                    </div>
+
+                    <div class="recepies-cards">
+                        <div class="recepies-card">
+                            <img class="recepies-card__img" src="./assets/images/recepies/recepies-1.jpg" alt="recepies-1">
+                            <p class="recepies-card__name">Рецепт блюда из форели 
+                                и лангустина
+                            </p>
+                        </div>
+
+                        <div class="recepies-card">
+                            <img class="recepies-card__img" src="./assets/images/recepies/recepies-1.jpg" alt="recepies-1">
+                            <p class="recepies-card__name">Рецепт блюда из форели 
+                                и лангустина
+                            </p>
+                        </div>
+
+                        <div class="recepies-card">
+                            <img class="recepies-card__img" src="./assets/images/recepies/recepies-1.jpg" alt="recepies-1">
+                            <p class="recepies-card__name">Рецепт блюда из форели 
+                                и лангустина
+                            </p>
+                        </div>
+
+                        <div class="recepies-card">
+                            <img class="recepies-card__img" src="./assets/images/recepies/recepies-1.jpg" alt="recepies-1">
+                            <p class="recepies-card__name">Рецепт блюда из форели 
+                                и лангустина
+                            </p>
+                        </div>
+
+                        <div class="recepies-card">
+                            <img class="recepies-card__img" src="./assets/images/recepies/recepies-1.jpg" alt="recepies-1">
+                            <p class="recepies-card__name">Рецепт блюда из форели 
+                                и лангустина
+                            </p>
+                        </div>
+                    </div>
+                </section> -->
+            </div>
         </main>
 
         <footer class="footer">
-            <div class="container">Подвал сайта</div>
+            <div class="container">
+                <div class="footer_container">
+                    <div class="footer__logo_ang_text">
+                        <img class="footer__logo" src="./assets/images/header/Footer.svg" alt="footer__logo">
+                        <div class="footer__text">Paspaботано в <span><a class="footer__text-link">LOBUT DIGITAL</a></span></div>
+                    </div>
+
+                    <div class="footer__information-contacts">
+                        <div class="information_company-list">
+                            <h3 class="information_list-title">Каталог</h3>
+                            <ul class="information_list">
+                                <li class="information_list-item"><a class="information_list-item-link" href="#">Охлажденная рыба</a></li>
+                                <li class="information_list-item"><a class="information_list-item-link" href="#">Охлажденная рыба</a></li>
+                                <li class="information_list-item"><a class="information_list-item-link" href="#">Охлажденная рыба</a></li>
+                                <li class="information_list-item"><a class="information_list-item-link" href="#">Охлажденная рыба</a></li>
+
+                            </ul>
+                        </div>
+
+                        <div class="information_company-list">
+                            <h3 class="information_list-title">Каталог</h3>
+                            <ul class="information_list">
+                                <li class="information_list-item"><a class="information_list-item-link" href="#">Охлажденная рыба</a></li>
+                                <li class="information_list-item"><a class="information_list-item-link" href="#">Охлажденная рыба</a></li>
+                                <li class="information_list-item"><a class="information_list-item-link" href="#">Охлажденная рыба</a></li>
+                                <li class="information_list-item"><a class="information_list-item-link" href="#">Охлажденная рыба</a></li>
+
+                            </ul>
+                        </div>
+
+                        <div class="information_company-list">
+                            <h3 class="information_list-title">Каталог</h3>
+                            <ul class="information_list">
+                                <li class="information_list-item"><a class="information_list-item-link" href="#">Охлажденная рыба</a></li>
+                                <li class="information_list-item"><a class="information_list-item-link" href="#">Охлажденная рыба</a></li>
+                                <li class="information_list-item"><a class="information_list-item-link" href="#">Охлажденная рыба</a></li>
+                                <li class="information_list-item"><a class="information_list-item-link" href="#">Охлажденная рыба</a></li>
+
+                            </ul>
+                        </div>
+
+                        <div class="information_company-list">
+                            <h3 class="information_list-title">Каталог</h3>
+                            <ul class="information_list">
+                                <li class="information_list-item"><a class="information_list-item-link" href="#">Охлажденная рыба</a></li>
+                                <li class="information_list-item"><a class="information_list-item-link" href="#">Охлажденная рыба</a></li>
+                                <li class="information_list-item"><a class="information_list-item-link" href="#">Охлажденная рыба</a></li>
+                                <li class="information_list-item"><a class="information_list-item-link" href="#">Охлажденная рыба</a></li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </footer>
     </div>
 
