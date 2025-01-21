@@ -4,6 +4,18 @@ font-family: "Raleway", sans-serif;
 font-family: "Champagne & Limousines", sans-serif;
 */
 
+*{
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevent horizontal scrollbar */
+    width: 100%; /* Ensure body takes full width */
+    height: 100%; /* Ensure body takes full height */
+}
+
 :root {
     --bs-body-font-family: "Raleway", sans-serif;
 }
@@ -23,7 +35,7 @@ header {
 
 main {
     flex: 1;
-    padding: 20px;
+    /* padding: 20px; */
 }
 
 footer {
@@ -173,5 +185,68 @@ footer {
     .footer ul li {
         text-align: center; /* Center align list items */
         font-size: 1rem; /* Increase list item size on smaller screens */
+    }
+}
+
+.about-us {
+    height: 472px; 
+    width: 100vw; 
+
+    
+}
+.background-image {
+    background-size: cover;
+    background-position: center;
+    height: 100%; /* Full height of the column */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.col-md-6 {
+    margin: 0; /* Remove any default margin */
+    padding: 0; /* Remove any padding */
+}
+
+.overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the text */
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5); /* Optional: dark overlay for better text visibility */
+    border-radius: 10px; /* Optional: rounded corners */
+}
+
+.text-container {
+    z-index: 1; /* Ensure text is on top */
+}
+
+
+.marquee {
+    overflow: hidden; /* Hide overflow */
+    white-space: nowrap; /* Prevent line breaks */
+    background-color: #f8f9fa; /* Background color */
+    padding: 10px; /* Padding around the text */
+}
+
+.marquee-content {
+    display: inline-block; /* Display text inline */
+    animation: marquee 20s linear infinite; /* Animation properties */
+}
+
+.marquee p {
+    display: inline; /* Display text inline */
+    margin: 0; /* Remove default margin */
+}
+
+/* Keyframes for the marquee effect */
+@keyframes marquee {
+    0% {
+        transform: translateX(0); /* Start at the beginning */
+    }
+    100% {
+        transform: translateX(-50%); /* Move left by half the content width */
     }
 }
