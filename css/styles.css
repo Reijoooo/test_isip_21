@@ -8,6 +8,15 @@ font-family: "Champagne & Limousines", sans-serif;
     --bs-body-font-family: "Raleway", sans-serif;
 }
 
+section {
+    margin-top: 60px;
+}
+
+h4 {
+    font-weight: 300;
+    color: #393E51;
+}
+
 body {
     display: flex;
     flex-direction: column;
@@ -16,13 +25,13 @@ body {
 
 header {
     position: sticky;
+    z-index: 100;
     background-color: white;
     top: 0;
 }
 
 main {
     flex: 1;
-    padding: 20px;
 }
 
 footer {
@@ -47,7 +56,6 @@ footer {
     font-weight: 300;
     line-height: 1.7;
 }
-
 
 .wrapper {
     display: flex;
@@ -120,12 +128,56 @@ footer {
 }
 
 .static-dropdown {
-    display: none; /* Скрываем меню по умолчанию */
+    display: none;
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
 .static-dropdown.show {
-    display: block; /* Показываем меню при активации */
+    display: block;
+}
+
+/* FAQ */
+.accordion-item {
+    border: none;
+    border-top: 1px solid #f0f0f0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.accordion-button::after {
+    padding: 0px;
+    content: '';
+    background-image: url('../assets/icons/button-arrow.svg')!important;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 3em;
+    height: 3em;
+    transform: rotate(0deg);
+    transition: transform 0.2s;
+}
+
+.accordion-button {
+    padding: 5px 15px;
+}
+
+.accordion-button:not(.collapsed)::after {
+    transform: rotate(180deg)
+}
+
+
+.background-card {
+    padding: 140px;
+}
+
+@media (max-width: 1200px) {
+    .col-md-5 {
+        padding: 60px; 
+    }
+}
+
+@media (max-width: 746px) {
+    .col-md-5 {
+        padding: 20px; 
+    }
 }
