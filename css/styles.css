@@ -5,5 +5,323 @@ font-family: "Champagne & Limousines", sans-serif;
 */
 
 :root {
-    --bs-body-font-family: "Raleway", sans-serif;
+  --bs-body-font-family: "Raleway", sans-serif;
+}
+
+.grid-container-one {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+.grid-container-two {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  grid-template-areas:
+    "card-1 card-2 card-3  card-4"
+    "card-1 card-5 card-6 card-6";
+}
+
+.popular-cars {
+  width: min(100% - 1rem, 1200px);
+  margin: 0 auto;
+}
+.popular-cars__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+  gap: 8px;
+}
+.popular-cars__header h2 {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 36px;
+  text-align: left;
+  font-family: "Champagne & Limousines", sans-serif;
+}
+.popular-cars__header a {
+  text-decoration: none;
+  color: #393e51;
+  font-size: 20px;
+}
+.popular-card {
+  height: 312px;
+  background-image: url(../assets/image/card-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  text-align: left;
+  color: #000;
+  padding: 1rem;
+  border-radius: 24px;
+}
+
+.popular-card img {
+  max-width: 400px;
+  height: auto;
+  margin-top: 8px;
+  object-fit: cover;
+}
+
+.card-large {
+  grid-column: span 2;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-large h2 {
+  margin-top: -240px;
+}
+.popular-card h2 {
+  width: 100%;
+  font-size: 20px;
+}
+
+.card-1 {
+  grid-area: card-1;
+  height: 100%;
+  max-width: 320px;
+}
+
+.card-1 img {
+  margin-bottom: -13px;
+  max-width: 320px;
+}
+
+.card-2 {
+  grid-area: card-2;
+  max-width: 320px;
+}
+
+.card-3 {
+  grid-area: card-3;
+  max-width: 320px;
+}
+
+.card-4 {
+  grid-area: card-4;
+  max-width: 320px;
+}
+
+.card-5 {
+  grid-area: card-5;
+  max-width: 320px;
+}
+
+.card-6 {
+  grid-area: card-6;
+}
+@media (max-width: 768px) {
+  .grid-container-one,
+  .grid-container-two {
+    grid-template-columns: repeat(2, 1fr); /* Две колонки */
+  }
+
+  .grid-container-two {
+    grid-template-areas:
+      "card-1 card-1"
+      "card-2 card-3"
+      "card-4 card-5"
+      "card-6 card-6";
+  }
+  .card-large {
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 480px) {
+  .grid-container {
+    .grid-container-one,
+    .grid-container-two {
+      grid-template-columns: 1fr; /* Одна колонка */
+      grid-template-areas: none; /* Убираем области для мобильного макета */
+    }
+
+    .popular-card {
+      width: 100%;
+    }
+
+    .card-large {
+      grid-column: span 1;
+    }
+  }
+}
+section {
+  margin-top: 60px;
+}
+
+h4 {
+  font-weight: 300;
+  color: #393e51;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+
+header {
+  position: sticky;
+  z-index: 100;
+  background-color: white;
+  top: 0;
+}
+
+main {
+  flex: 1;
+}
+
+footer {
+  padding: 40px 0;
+  text-align: center;
+  color: white;
+  background-color: #3d518c;
+}
+
+.icon {
+  width: 30px;
+  padding-right: 5px;
+}
+
+.nav-link {
+  color: #393e51;
+}
+
+.nav-link--light {
+  color: white;
+  font-size: 0.9em;
+  font-weight: 300;
+  line-height: 1.7;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.btn-primary {
+  background-color: #3d518c;
+  border: none;
+}
+
+/* header */
+.logo {
+  max-width: 70px;
+  margin-right: 10px;
+}
+
+@media (min-width: 768px) {
+  .logo {
+    max-width: 100px;
+  }
+}
+
+.dropdown-menu {
+  border: none;
+  outline: none;
+}
+
+.search-input-wrapper {
+  position: relative;
+  width: fit-content;
+}
+
+.search-input {
+  width: 600px;
+  padding: 11px;
+}
+
+.search-icon {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.navbar-toggler {
+  background-color: white;
+}
+
+.navbar-toggler:hover,
+.navbar-toggler:active,
+.navbar-toggler:focus-visible,
+.navbar-toggler:focus {
+  border: none;
+  outline: none;
+  background-color: white !important;
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='%233D518C' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+.search-icon img {
+  width: 20px;
+  height: 20px;
+}
+
+.static-dropdown {
+  display: none;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.static-dropdown.show {
+  display: block;
+}
+
+/* FAQ */
+.accordion-item {
+  border: none;
+  border-top: 1px solid #f0f0f0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.accordion-button::after {
+  padding: 0px;
+  content: "";
+  background-image: url("../assets/icons/button-arrow.svg") !important;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 3em;
+  height: 3em;
+  transform: rotate(0deg);
+  transition: transform 0.2s;
+}
+
+.accordion-button {
+  padding: 5px 15px;
+}
+
+.accordion-button:not(.collapsed)::after {
+  transform: rotate(180deg);
+}
+
+.background-card {
+  padding: 140px;
+}
+
+@media (max-width: 1200px) {
+  .col-md-5 {
+    padding: 60px;
+  }
+}
+
+@media (max-width: 746px) {
+  .col-md-5 {
+    padding: 20px;
+  }
 }
