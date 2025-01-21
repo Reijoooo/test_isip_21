@@ -22,7 +22,89 @@ header {
 
 main {
     flex: 1;
-    padding: 20px;
+    padding: 20px 0;
+}
+
+/* главный блок на главной */
+.hero-section {
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+    margin: 0;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.swiper-pagination {
+    opacity: 0;
+}
+
+.swiper-buttons {
+    padding-left: 15px;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    position: static;
+    color: #fff;
+    border-radius: 50%;
+    width: 55px;
+    height: 55px;
+    border: 1px solid #fff;
+    margin: 0 7px;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+    content: '';
+    border: solid #fff;
+    border-width: 0 2px 2px 0;
+    border-radius: 1px;
+    height: 18px;
+    width: 18px;
+}
+
+.swiper-button-next {
+    padding-right: 10px;
+}
+.swiper-button-next::after {
+    transform: rotate(-45deg);
+}
+
+.swiper-button-prev {
+    padding-left: 10px;
+}
+.swiper-button-prev::after {
+    transform: rotate(135deg);
+}
+
+@media (max-width: 991px) {
+    .swiper-pagination {
+        position: static;
+        opacity: 1;
+    }
+
+    .swiper-buttons {
+        padding-left: 0;
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        display: none;
+    }
+
+    .catalog-btn {
+        justify-content: center !important;
+    }
+
+    .hero-section {
+        align-items: center !important;
+        justify-content: flex-start;
+        padding-top: 50px;
+        text-align: center;
+    }
 }
 
 footer {
@@ -48,7 +130,6 @@ footer {
     line-height: 1.7;
 }
 
-
 .wrapper {
     display: flex;
     flex-direction: column;
@@ -58,6 +139,16 @@ footer {
 .btn-primary {
     background-color: #3D518C; 
     border: none;
+}
+
+.btn-secondary {
+    background-color: #fff; 
+    color: #000;
+    border: none;
+}
+
+.text-accent {
+    color: #BDAA8A;
 }
 
 /* header */

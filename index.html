@@ -116,12 +116,46 @@
                         <img class="icon me-3" src="./assets/icons/telegram.svg" alt="telegram">
                         <img class="icon" src="./assets/icons/vk.svg" alt="vk">
                     </div>
+                    <button type="button" class="btn w-100 text-white py-2 my-3" style="background-color: #BDAA8A;">+7 (922) 181 36 75</button>
                 </div>
             </div>
         </div>
     
         <main class="main">
-            <div class="container-xl">Главная страница</div>
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide hero-section" style="background-image: url('../assets/images/main-page.jpg');">
+                        <div class="container-xl">
+                            <h1 class="display-4 fw-medium d-flex flex-column">
+                                <span class="text-accent">Если хочется чего-то,</span> но не понятно чего
+                            </h1>
+                            <p class="lead mt-3">Знайте - морепродуктов!</p>
+                            <div class="d-flex align-items-center mt-5 catalog-btn">
+                                <a href="#catalog" class="btn btn-secondary btn-lg px-5 py-3">Перейти в каталог</a>
+                                <div class="d-flex swiper-buttons">
+                                    <div class="swiper-button-prev"></div>
+                                    <div class="swiper-button-next"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide hero-section" style="background-image: url('../assets/images/main-page-1.jpg');">
+                        <div class="container-xl">
+                            <h1 class="display-4 fw-medium d-flex flex-column">
+                                <span class="text-accent">Если хочется чего-то,</span> но не понятно чего
+                            </h1>
+                            <p class="lead mt-3">Знайте - морепродуктов!</p>
+                            <div class="d-flex align-items-center mt-5 catalog-btn">
+                                <a href="#catalog" class="btn btn-secondary btn-lg px-5 py-3">Перейти в каталог</a>
+                                <div class="d-flex swiper-buttons">
+                                    <div class="swiper-button-prev"></div>
+                                    <div class="swiper-button-next"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </main>
 
         <footer class="footer">
@@ -129,7 +163,7 @@
                 <div class="row text-center justify-content-between text-lg-start">
                     <div class="col-12 col-lg-2 d-flex flex-column justify-content-between mb-2">
                         <img class="logo" src="./assets/images/logo-light.png" alt="logo">
-                        <p class="small" style="font-size: 0.7rem; font-weight: 300;">Paspaботано в <a href="#" class="text-white">LOBUT DIGITAL</a></p>
+                        <p class="small" style="font-size: 0.7rem; font-weight: 300;">Paзpaботано в <a href="#" class="text-white">LOBUT DIGITAL</a></p>
                     </div>
                     <div class="col-12 col-lg-2">
                         <h6>Каталог</h6>
@@ -181,6 +215,17 @@
 </html>
 
 <script>
+    const swiper = new Swiper('.swiper-container', {
+        slidesPerView: 1,
+        effect: 'fade',
+        allowTouchMove: false,
+        slideToClickedSlide: false,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    });
+
     function toggleDropdown(event) {
         event.preventDefault();
         const dropdownMenu = event.target.nextElementSibling;
