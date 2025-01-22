@@ -57,6 +57,11 @@ h4 {
     padding-right: 5px;
 }
 
+.link {
+    color: black;
+    text-decoration: none;
+}
+
 .nav-link {
     color: #393E51;
 }
@@ -165,34 +170,6 @@ h4 {
     display: block;
 }
 
-/* FAQ */
-.accordion-item {
-    border: none;
-    border-top: 1px solid #f0f0f0;
-    border-bottom: 1px solid #f0f0f0;
-}
-
-.accordion-button::after {
-    padding: 0px;
-    content: '';
-    background-image: url('../assets/icons/button-arrow.svg')!important;
-    background-size: contain;
-    background-repeat: no-repeat;
-    width: 3em;
-    height: 3em;
-    transform: rotate(0deg);
-    transition: transform 0.2s;
-}
-
-.accordion-button {
-    padding: 5px 15px;
-}
-
-.accordion-button:not(.collapsed)::after {
-    transform: rotate(180deg)
-}
-
-
 .background-card {
     padding: 140px;
     background-image: url('../assets/images/about-bg.jpg');
@@ -210,7 +187,3 @@ h4 {
     }
 }
 
-.link {
-    color: black;
-    text-decoration: none;
-}
