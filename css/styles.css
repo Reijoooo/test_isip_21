@@ -6,18 +6,8 @@ font-family: "Champagne & Limousines", sans-serif;
 
 :root {
   --bs-body-font-family: "Raleway", sans-serif;
-
-  /* header */
-  /* nav */
-  --color-navigation-dark: #393e51;
-  --color-navigation-light: #bdaa8a;
-  --fs-navigation: 14px;
-
-  --bc-button: #3d518c;
-  --color-white: #fff;
 }
 
-/* Reset and base styles  */
 * {
   box-sizing: border-box;
 }
@@ -58,7 +48,6 @@ h4 {
   color: #393e51;
 }
 
-/* main banner section + swiper */
 .hero-section {
   background-size: cover;
   background-position: center;
@@ -111,6 +100,10 @@ h4 {
 }
 .swiper-button-prev::after {
   transform: rotate(135deg);
+}
+
+.swiper.swiper-cards {
+  overflow: hidden;
 }
 
 @media (max-width: 991px) {
@@ -268,15 +261,15 @@ footer {
 }
 
 .col-md-6 {
-  margin: 0; /* Remove any default margin */
-  padding: 0; /* Remove any padding */
+  margin: 0;
+  padding: 0;
 }
 
 .overlay-text {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%); /* Center the text */
+  transform: translate(-50%, -50%);
   text-align: center;
   padding: 20px;
   background-color: rgba(0, 0, 0, 0.5);
@@ -288,24 +281,26 @@ footer {
 }
 
 .marquee {
-  overflow: hidden;
-  white-space: nowrap;
-  background-color: #f8f9fa;
-  padding: 10px;
-
-  border: 1px solid #ede8e1;
+  overflow: hidden; /* Hide overflow */
+  white-space: nowrap; /* Prevent line breaks */
+  background-color: #f8f5f0; /* Background color */
+  padding: 10px; /* Padding around the text */
+  border: 1px solid #eeeeee;
 }
 
 .marquee-content {
-  display: inline-block;
-  animation: marquee 20s linear infinite;
+  display: inline-block; /* Display text inline */
+  animation: marquee 20s linear infinite; /* Animation properties */
 }
 
 .marquee p {
-  display: inline;
-  margin: 0;
+  display: inline; /* Display text inline */
+  margin: 0; /* Remove default margin */
+}
+
+.marquee-content__item {
+  padding-left: 40px;
   color: #bdaa8a;
-  padding-left: 80px;
 }
 
 /* Keyframes for the marquee effect */
@@ -339,7 +334,7 @@ footer {
   gap: 8px;
 }
 
-.swiper-wrapper-recepies {
+.recepies-cards {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 17px;
@@ -370,6 +365,53 @@ footer {
   color: #fff;
   font-weight: 500;
   font-family: "Raleway", sans-serif;
+}
+
+/* news */
+.shrimp-card {
+  position: relative;
+  width: 262px;
+  height: 430px;
+  overflow: hidden;
+  border: 2px solid rgb(226, 224, 224);
+  border-radius: 20px;
+  padding: 10px 20px;
+}
+
+.shrimp-card__discount {
+  background-color: #3d518c;
+  color: #fff;
+  padding: 3px 10px;
+  width: 50px;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: 400;
+  font-family: "Raleway", sans-serif;
+}
+
+.text-price {
+  color: #3d518c;
+  font-weight: 500;
+  font-family: "Raleway", sans-serif;
+  font-size: 20px;
+}
+
+.text-last-price {
+  text-decoration: line-through;
+}
+
+.shrimp-card__status {
+  background-color: rgb(224, 220, 220);
+  font-size: 16px;
+  border-radius: 5px;
+  color: #3d518c;
+}
+
+.icon-cart {
+  cursor: pointer;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
 }
 
 /* FAQ */
@@ -412,5 +454,183 @@ footer {
 @media (max-width: 746px) {
   .col-md-5 {
     padding: 20px;
+  }
+}
+
+/* grid cards */
+.grid-container-one {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+.grid-container-two {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  grid-template-areas:
+    "card-1 card-2 card-3  card-4"
+    "card-1 card-5 card-6 card-6";
+}
+
+.popular-cars {
+  width: min(100% - 1rem, 1320px);
+  margin: 40px auto;
+}
+.popular-cars__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+  gap: 8px;
+}
+.popular-cars__header h2 {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 36px;
+  text-align: left;
+  font-family: "Champagne & Limousines", sans-serif;
+}
+.popular-cars__header a {
+  text-decoration: none;
+  color: #393e51;
+  font-size: 20px;
+}
+.popular-card {
+  height: 312px;
+  background-image: url("../assets/images/card-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  overflow: hidden;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  text-align: left;
+  color: #000;
+  padding: 1rem;
+  border-radius: 24px;
+}
+
+.popular-card img {
+  max-width: 100%;
+  height: auto;
+  margin-top: 8px;
+  object-fit: cover;
+}
+
+.card-large {
+  grid-column: span 2;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-large h2 {
+  margin-top: -240px;
+}
+.popular-card h2 {
+  width: 100%;
+  font-size: 20px;
+}
+
+.card-1 {
+  grid-area: card-1;
+  height: 100%;
+  max-width: 320px;
+}
+
+.card-1 img {
+  margin-bottom: -13px;
+  max-width: 320px;
+}
+
+.card-2 {
+  grid-area: card-2;
+  max-width: 320px;
+}
+
+.card-3 {
+  grid-area: card-3;
+  max-width: 320px;
+}
+
+.card-4 {
+  grid-area: card-4;
+  max-width: 320px;
+}
+
+.card-5 {
+  grid-area: card-5;
+  max-width: 320px;
+}
+
+.card-6 {
+  grid-area: card-6;
+}
+@media (max-width: 1100px) {
+  .grid-container-one,
+  .grid-container-two {
+    grid-template-columns: repeat(3, 1fr); /* Три колонки */
+  }
+  .grid-container-two {
+    grid-template-areas:
+      "card-1 card-2 card-3"
+      "card-1 card-4 card-5"
+      "card-6 card-6 card-6";
+  }
+}
+@media (max-width: 768px) {
+  .grid-container-one,
+  .grid-container-two {
+    grid-template-columns: repeat(2, 1fr); /* Две колонки */
+  }
+
+  .grid-container-two {
+    grid-template-areas:
+      "card-1 card-1"
+      "card-2 card-3"
+      "card-4 card-5"
+      "card-6 card-6";
+  }
+  .card-large {
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 480px) {
+  .grid-container-one {
+    grid-template-columns: 1fr; /* Одна колонка */
+  }
+  .grid-container-two {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "card-1"
+      "card-2"
+      "card-3"
+      "card-4"
+      "card-5"
+      "card-6";
+  }
+  .card-1,
+  .card-2,
+  .card-3,
+  .card-4,
+  .card-5,
+  .card-6 {
+    max-width: 100%;
+  }
+  .popular-card {
+    width: 100%;
+  }
+
+  .card-large {
+    flex-direction: inherit;
+    display: inherit;
+    grid-column: span 1;
+  }
+  .card-large h2 {
+    margin-top: inherit;
   }
 }

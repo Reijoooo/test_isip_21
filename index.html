@@ -5,14 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
     <title>Гурман Маркет</title>
 
+    <!-- FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="assets/fonts/ChampagneLimousines/style.css" />
 
+    <!-- LIB -->
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/swiper-bundle.min.css" />
 
+    <!-- STYLES FOR SITE -->
     <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
@@ -39,7 +42,8 @@
             </div>
         </div>
 
-         <header class="header container-xl">
+        
+        <header class="header container-xl">
             <nav class="navbar navbar-expand-lg">
                 <div class="d-flex align-items-center">
                     <button class="navbar-toggler btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu" aria-controls="offcanvasMenu" aria-expanded="false" aria-label="Toggle navigation">
@@ -76,7 +80,7 @@
                 </div>
             </nav>
         </header>
-
+    
         <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasMenu" aria-labelledby="offcanvasMenuLabel" style="width: 80%;">
             <div class="offcanvas-header">
                 <button type="button" class="btn-close m-0" data-bs-dismiss="offcanvas" aria-label="Close"></button>
@@ -85,7 +89,7 @@
                 <div>
                     <ul class="navbar-nav mb-2 mb-lg-0">
                         <li class="nav-item dropdown">
-                            <span class="dropdown-toggle mx-3" onclick="toggleDropdown(event)" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <span class="dropdown-toggle mx-3" onclick="toggleDropdownMenu(event)" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Каталог
                             </span>
                             <ul class="dropdown static-dropdown">
@@ -118,8 +122,10 @@
                 </div>
             </div>
         </div>
-
+    
+        
         <main class="main">
+            
             <section>
                 <div class="swiper-container my-4">
                     <div class="swiper-wrapper">
@@ -130,7 +136,7 @@
                                 </h1>
                                 <p class="lead mt-3">Знайте - морепродуктов!</p>
                                 <div class="d-flex align-items-center mt-5 catalog-btn">
-                                    <a href="./catalog.html" class="btn btn-secondary btn-lg px-5 py-3">Перейти в каталог</a>
+                                    <a href="#catalog" class="btn btn-secondary btn-lg px-5 py-3">Перейти в каталог</a>
                                     <div class="d-flex swiper-buttons">
                                         <div class="swiper-button-prev"></div>
                                         <div class="swiper-button-next"></div>
@@ -145,7 +151,7 @@
                                 </h1>
                                 <p class="lead mt-3">Знайте - морепродуктов!</p>
                                 <div class="d-flex align-items-center mt-5 catalog-btn">
-                                    <a href="./catalog.html" class="btn btn-secondary btn-lg px-5 py-3">Перейти в каталог</a>
+                                    <a href="#catalog" class="btn btn-secondary btn-lg px-5 py-3">Перейти в каталог</a>
                                     <div class="d-flex swiper-buttons">
                                         <div class="swiper-button-prev"></div>
                                         <div class="swiper-button-next"></div>
@@ -156,21 +162,186 @@
                     </div>
                 </div>
             </section>
-
+            
+            
             <div class="marquee">
                 <div class="marquee-content">
-                    <p>Акция месяца – скидка 10% на всю консервацию</p>
-                    <p>Акция месяца – скидка 10% на всю консервацию</p>
-                    <p>Акция месяца – скидка 10% на всю консервацию</p>
-                    <p>Акция месяца – скидка 10% на всю консервацию</p>
-                    <p>Акция месяца – скидка 10% на всю консервацию</p>
-                    <p>Акция месяца – скидка 10% на всю консервацию</p>
-                    <p>Акция месяца – скидка 10% на всю консервацию</p>
-                    <p>Акция месяца – скидка 10% на всю консервацию</p>
-                    <p>Акция месяца – скидка 10% на всю консервацию</p>
+                    <p class="marquee-content__item">Акция месяца – скидка 10% на всю консервацию</p>
+                    <p class="marquee-content__item">Акция месяца – скидка 10% на всю консервацию</p>
+                    <p class="marquee-content__item">Акция месяца – скидка 10% на всю консервацию</p>
+                    <p class="marquee-content__item">Акция месяца – скидка 10% на всю консервацию</p>
+                    <p class="marquee-content__item">Акция месяца – скидка 10% на всю консервацию</p>
+                    <p class="marquee-content__item">Акция месяца – скидка 10% на всю консервацию</p>
+                    <p class="marquee-content__item">Акция месяца – скидка 10% на всю консервацию</p>
+                    <p class="marquee-content__item">Акция месяца – скидка 10% на всю консервацию</p>
+                    <p class="marquee-content__item">Акция месяца – скидка 10% на всю консервацию</p>
                 </div>
             </div>
 
+
+            
+            <section class="popular-cars">
+                <div class="popular-cars__header">
+                    <h2>Популярные категории</h2>
+                    <a href="#">Все категории <img src="./assets/images/button-arrow.png" alt="button-arrow"></a>
+                </div>
+                <div class="grid-container-one">
+                    <div class="popular-card card-large">
+                        <h2>Собственное производство</h2>
+                        <img src="./assets/images/popular-image-1.png" alt="image-1">
+                    </div>
+                    <div class="popular-card">
+                        <h2>Икра красная</h2>
+                        <img src="./assets/images/popular-image-2.png" alt="image-2">
+                    </div>
+                    <div class="popular-card">
+                        <h2>Консервация и деликатесы</h2>
+                        <img src="./assets/images/popular-image-3.png" alt="image-3">
+                    </div>
+                    <div class="popular-card">
+                        <h2>Мясо, птица</h2>
+                        <img src="./assets/images/popular-image-4.png" alt="image-4">
+                    </div>
+                    <div class="popular-card">
+                        <h2>Рыба</h2>
+                        <img src="./assets/images/popular-image-5.png" alt="image-5">
+                    </div>
+                    <div class="popular-card card-large card-grig-one-last">
+                        <h2>Морепродукты</h2>
+                        <img src="./assets/images/popular-image-6.png" alt="image-6">
+                    </div>
+                </div>
+            </section>
+
+
+            
+            <section class="container-xl">
+                <div class="d-flex justify-content-between mb-3">
+                    <h2>Новинки</h2>
+                    <div class="d-flex gap-2">
+                        <div class="card-button-prev"><img src="assets/icons/button-arrow-back.svg" alt="button-arrow-back"></div>
+                        <div class="card-button-next"><img src="assets/icons/button-arrow-next.svg" alt="button-arrow-next"></div>
+                    </div>
+                </div>
+                <div class="swiper swiper-cards">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide shrimp-card">
+                            <img class="icon" src="./assets/icons/like.svg" alt="">
+                            <img class="shrimp-card__img" src="./assets/images/кревекта.png" alt="shrimp-1">
+                            <p class="shrimp-card__discount">-10%</p>
+                            <p class="shrimp-card__name">Тигровые креветки очищенные без хвоста текст текст</p>
+                            <div class="shrimp-card__price d-flex gap-3">
+                                <p class="text-price">2 000 ₽/кг</p>
+                                <p class="text-last-price">1 000 ₽/кг</p>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <ol class="shrimp-card__status"> 
+                                    <li type="circle" class="px-1">В наличии</li>
+                                </ol>
+                                <img class="icon-cart" src="./assets/icons/corsina.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-slide shrimp-card">
+                            <img class="icon" src="./assets/icons/like.svg" alt="">
+                            <img class="shrimp-card__img" src="./assets/images/кревекта.png" alt="shrimp-1">
+                            <p class="shrimp-card__discount">-10%</p>
+                            <p class="shrimp-card__name">Тигровые креветки очищенные без хвоста текст текст</p>
+                            <div class="shrimp-card__price d-flex gap-3">
+                                <p class="text-price">2 000 ₽/кг</p>
+                                <p class="text-last-price">1 000 ₽/кг</p>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <ol class="shrimp-card__status"> 
+                                    <li type="circle" class="px-1">В наличии</li>
+                                </ol>
+                                <img class="icon-cart" src="./assets/icons/corsina.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-slide shrimp-card">
+                            <img class="icon" src="./assets/icons/like.svg" alt="">
+                            <img class="shrimp-card__img" src="./assets/images/кревекта.png" alt="shrimp-1">
+                            <p class="shrimp-card__discount">-10%</p>
+                            <p class="shrimp-card__name">Тигровые креветки очищенные без хвоста текст текст</p>
+                            <div class="shrimp-card__price d-flex gap-3">
+                                <p class="text-price">2 000 ₽/кг</p>
+                                <p class="text-last-price">1 000 ₽/кг</p>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <ol class="shrimp-card__status"> 
+                                    <li type="circle" class="px-1">В наличии</li>
+                                </ol>
+                                <img class="icon-cart" src="./assets/icons/corsina.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-slide shrimp-card">
+                            <img class="icon" src="./assets/icons/like.svg" alt="">
+                            <img class="shrimp-card__img" src="./assets/images/кревекта.png" alt="shrimp-1">
+                            <p class="shrimp-card__discount">-10%</p>
+                            <p class="shrimp-card__name">Тигровые креветки очищенные без хвоста текст текст</p>
+                            <div class="shrimp-card__price d-flex gap-3">
+                                <p class="text-price">2 000 ₽/кг</p>
+                                <p class="text-last-price">1 000 ₽/кг</p>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <ol class="shrimp-card__status"> 
+                                    <li type="circle" class="px-1">В наличии</li>
+                                </ol>
+                                <img class="icon-cart" src="./assets/icons/corsina.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-slide shrimp-card">
+                            <img class="icon" src="./assets/icons/like.svg" alt="">
+                            <img class="shrimp-card__img" src="./assets/images/кревекта.png" alt="shrimp-1">
+                            <p class="shrimp-card__discount">-10%</p>
+                            <p class="shrimp-card__name">Тигровые креветки очищенные без хвоста текст текст</p>
+                            <div class="shrimp-card__price d-flex gap-3">
+                                <p class="text-price">2 000 ₽/кг</p>
+                                <p class="text-last-price">1 000 ₽/кг</p>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <ol class="shrimp-card__status"> 
+                                    <li type="circle" class="px-1">В наличии</li>
+                                </ol>
+                                <img class="icon-cart" src="./assets/icons/corsina.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-slide shrimp-card">
+                            <img class="icon" src="./assets/icons/like.svg" alt="">
+                            <img class="shrimp-card__img" src="./assets/images/кревекта.png" alt="shrimp-1">
+                            <p class="shrimp-card__discount">-10%</p>
+                            <p class="shrimp-card__name">Тигровые креветки очищенные без хвоста текст текст</p>
+                            <div class="shrimp-card__price d-flex gap-3">
+                                <p class="text-price">2 000 ₽/кг</p>
+                                <p class="text-last-price">1 000 ₽/кг</p>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <ol class="shrimp-card__status"> 
+                                    <li type="circle" class="px-1">В наличии</li>
+                                </ol>
+                                <img class="icon-cart" src="./assets/icons/corsina.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-slide shrimp-card">
+                            <img class="icon" src="./assets/icons/like.svg" alt="">
+                            <img class="shrimp-card__img" src="./assets/images/кревекта.png" alt="shrimp-1">
+                            <p class="shrimp-card__discount">-10%</p>
+                            <p class="shrimp-card__name">Тигровые креветки очищенные без хвоста текст текст</p>
+                            <div class="shrimp-card__price d-flex gap-3">
+                                <p class="text-price">2 000 ₽/кг</p>
+                                <p class="text-last-price">1 000 ₽/кг</p>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <ol class="shrimp-card__status"> 
+                                    <li type="circle" class="px-1">В наличии</li>
+                                </ol>
+                                <img class="icon-cart" src="./assets/icons/corsina.svg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            
             <section class="about-us d-flex justify-content-between">
                 <div class="row h-100 w-100 " style="min-height: 470px;">
                     <div class="col-md-6 position-relative p-0">
@@ -188,6 +359,43 @@
                 </div>
             </section>
 
+
+          
+            <section class="popular-cars">
+                <div class="popular-cars__header">
+                    <h2>Интересное</h2>
+                    <a href="#">Все статьи <img src="./assets/images/button-arrow.png" alt="button-arrow"></a>
+                </div>
+                <div class="grid-container-two">
+                    <div class="popular-card card-1">
+                        <h2>Камчатский краб, что в нем едят</h2>
+                        <img src="./assets/images/Interesting-image-1.png" alt="image-1">
+                    </div>
+                    <div class="popular-card card-2">
+                        <h2>Как не бояться пробовать новое</h2>
+                        <img src="./assets/images/Interesting-image-2.png" alt="image-2">
+                    </div>
+                    <div class="popular-card card-3">
+                        <h2>Скажите, это лосось или сёмга?</h2>
+                        <img src="./assets/images/Interesting-image-3.png" alt="image-3">
+                    </div>
+                    <div class="popular-card card-4">
+                        <h2>Как правильно чистить креветки?</h2>
+                        <img src="./assets/images/Interesting-image-4.png" alt="image-4">
+                    </div>
+                    <div class="popular-card card-5">
+                        <h2>Интересные факты о морском гребешке</h2>
+                        <img src="./assets/images/Interesting-image-5.png" alt="image-5">
+                    </div>
+                    <div class="popular-card card-6">
+                        <h2>Почему тилапия такая полезная?</h2>
+                        <img src="./assets/images/Interesting-image-6.png" alt="image-6">
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- about-us -->
             <section class="about-us d-flex justify-content-between">
                 <div class="row h-100 w-100 " style="min-height: 470px;">
                     <div class="col-md-6 position-relative p-0">
@@ -207,16 +415,16 @@
                 </div>
             </section>
 
-            
+            <!-- recepies -->
             <section class="container-xl">
                 <div class="d-flex justify-content-between mb-3">
                     <h2>Рецепты</h2>
                     <div class="d-flex gap-2">
-                        <div class="recepies-button-prev"><img src="assets/icons/button-arrow-back.svg" alt="button-arrow-back"></div>
-                        <div class="recepies-button-next"><img src="assets/icons/button-arrow-next.svg" alt="button-arrow-next"></div>
+                        <div class="card-button-prev"><img src="assets/icons/button-arrow-back.svg" alt="button-arrow-back"></div>
+                        <div class="card-button-next"><img src="assets/icons/button-arrow-next.svg" alt="button-arrow-next"></div>
                     </div>
                 </div>
-                <div class="swiper swiper-recepies">
+                <div class="swiper swiper-cards">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide recepies-card">
                             <img class="recepies-card__img" src="./assets/images/Rectangle 789-1.jpg" alt="recepies-1">
@@ -247,6 +455,7 @@
             </section>
             
 
+            <!-- FAQ -->
             <section class="container-xl">
                 <h4 class="mb-4">FAQ</h4>
                 <div class="accordion" id="faqAccordion">
@@ -258,7 +467,7 @@
                         </h2>
                         <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
                             <div class="accordion-body">
-                                Да
+                                Да.
                             </div>
                         </div>
                     </div>
@@ -270,7 +479,7 @@
                         </h2>
                         <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
                             <div class="accordion-body">
-                                Десять минут пятого 
+                                Десять минут пятого
                             </div>
                         </div>
                     </div>
@@ -282,7 +491,7 @@
                         </h2>
                         <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
                             <div class="accordion-body">
-                                300 рублей
+                                300 рублей
                             </div>
                         </div>
                     </div>
@@ -294,14 +503,14 @@
                         </h2>
                         <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#faqAccordion">
                             <div class="accordion-body">
-                                Да
+                                Да.
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
 
-            
+           
             <section class="d-flex justify-content-between">
                 <div class="row h-100 w-100" style="min-height: 470px;">
                     <div class="background-card col-12 col-md-5 d-flex align-items-center" style="background-image: url('./assets/images/about-bg.jpg');">
@@ -330,6 +539,7 @@
             </section>
         </main>
 
+        <!-- footer -->
         <footer class="footer">
             <div class="container-xl">
                 <div class="row text-center justify-content-between text-lg-start">
@@ -381,8 +591,8 @@
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/swiper-bundle.min.js"></script>
 
-
+    <!-- SCRIPT FOR SITE -->
     <script src="js/scripts.js"></script>
-    
 </body>
 </html>
+
