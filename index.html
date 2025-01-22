@@ -17,7 +17,6 @@
 
     <!-- STYLES FOR SITE -->
     <link rel="stylesheet" href="css/styles.css" />
-    <link rel="stylesheet" href="css/marquee.css" />
 </head>
 <body>
     <div class="wrapper">
@@ -90,7 +89,7 @@
                 <div>
                     <ul class="navbar-nav mb-2 mb-lg-0">
                         <li class="nav-item dropdown">
-                            <span class="dropdown-toggle mx-3" onclick="toggleDropdown(event)" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <span class="dropdown-toggle mx-3" onclick="toggleDropdownMenu(event)" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Каталог
                             </span>
                             <ul class="dropdown static-dropdown">
@@ -126,6 +125,7 @@
     
         <!-- main -->
         <main class="main">
+            <!-- main banner -->
             <section>
                 <div class="swiper-container my-4">
                     <div class="swiper-wrapper">
@@ -144,7 +144,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="swiper-slide hero-section" style="background-image: url('assets/images/main-page-1.jpg');">
+                        <div class="swiper-slide hero-section" style="background-image: url('../assets/images/main-page-1.jpg');">
                             <div class="container-xl">
                                 <h1 class="display-4 fw-medium d-flex flex-column">
                                     <span class="text-accent">Если хочется чего-то,</span> но не понятно чего
@@ -162,21 +162,186 @@
                     </div>
                 </div>
             </section>
-
+            
+            <!-- marquee -->
             <div class="marquee">
                 <div class="marquee-content">
-                    <p>Акция месяца – скидка 10% на всю консервацию</p>
-                    <p>Акция месяца – скидка 10% на всю консервацию</p>
-                    <p>Акция месяца – скидка 10% на всю консервацию</p>
-                    <p>Акция месяца – скидка 10% на всю консервацию</p>
-                    <p>Акция месяца – скидка 10% на всю консервацию</p>
-                    <p>Акция месяца – скидка 10% на всю консервацию</p>
-                    <p>Акция месяца – скидка 10% на всю консервацию</p>
-                    <p>Акция месяца – скидка 10% на всю консервацию</p>
-                    <p>Акция месяца – скидка 10% на всю консервацию</p>
+                    <p class="marquee-content__item">Акция месяца – скидка 10% на всю консервацию</p>
+                    <p class="marquee-content__item">Акция месяца – скидка 10% на всю консервацию</p>
+                    <p class="marquee-content__item">Акция месяца – скидка 10% на всю консервацию</p>
+                    <p class="marquee-content__item">Акция месяца – скидка 10% на всю консервацию</p>
+                    <p class="marquee-content__item">Акция месяца – скидка 10% на всю консервацию</p>
+                    <p class="marquee-content__item">Акция месяца – скидка 10% на всю консервацию</p>
+                    <p class="marquee-content__item">Акция месяца – скидка 10% на всю консервацию</p>
+                    <p class="marquee-content__item">Акция месяца – скидка 10% на всю консервацию</p>
+                    <p class="marquee-content__item">Акция месяца – скидка 10% на всю консервацию</p>
                 </div>
             </div>
 
+
+            <!-- popular-cars -->
+            <section class="popular-cars">
+                <div class="popular-cars__header">
+                    <h2>Популярные категории</h2>
+                    <a href="#">Все категории <img src="./assets/images/button-arrow.png" alt="button-arrow"></a>
+                </div>
+                <div class="grid-container-one">
+                    <div class="popular-card card-large">
+                        <h2>Собственное производство</h2>
+                        <img src="./assets/images/popular-image-1.png" alt="image-1">
+                    </div>
+                    <div class="popular-card">
+                        <h2>Икра красная</h2>
+                        <img src="./assets/images/popular-image-2.png" alt="image-2">
+                    </div>
+                    <div class="popular-card">
+                        <h2>Консервация и деликатесы</h2>
+                        <img src="./assets/images/popular-image-3.png" alt="image-3">
+                    </div>
+                    <div class="popular-card">
+                        <h2>Мясо, птица</h2>
+                        <img src="./assets/images/popular-image-4.png" alt="image-4">
+                    </div>
+                    <div class="popular-card">
+                        <h2>Рыба</h2>
+                        <img src="./assets/images/popular-image-5.png" alt="image-5">
+                    </div>
+                    <div class="popular-card card-large card-grig-one-last">
+                        <h2>Морепродукты</h2>
+                        <img src="./assets/images/popular-image-6.png" alt="image-6">
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- news -->
+            <section class="container-xl">
+                <div class="d-flex justify-content-between mb-3">
+                    <h2>Новинки</h2>
+                    <div class="d-flex gap-2">
+                        <div class="card-button-prev"><img src="assets/icons/button-arrow-back.svg" alt="button-arrow-back"></div>
+                        <div class="card-button-next"><img src="assets/icons/button-arrow-next.svg" alt="button-arrow-next"></div>
+                    </div>
+                </div>
+                <div class="swiper swiper-cards">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide shrimp-card">
+                            <img class="icon" src="./assets/icons/like.svg" alt="">
+                            <img class="shrimp-card__img" src="./assets/images/кревекта.png" alt="shrimp-1">
+                            <p class="shrimp-card__discount">-10%</p>
+                            <p class="shrimp-card__name">Тигровые креветки очищенные без хвоста текст текст</p>
+                            <div class="shrimp-card__price d-flex gap-3">
+                                <p class="text-price">2 000 ₽/кг</p>
+                                <p class="text-last-price">1 000 ₽/кг</p>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <ol class="shrimp-card__status"> 
+                                    <li type="circle" class="px-1">В наличии</li>
+                                </ol>
+                                <img class="icon-cart" src="./assets/icons/corsina.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-slide shrimp-card">
+                            <img class="icon" src="./assets/icons/like.svg" alt="">
+                            <img class="shrimp-card__img" src="./assets/images/кревекта.png" alt="shrimp-1">
+                            <p class="shrimp-card__discount">-10%</p>
+                            <p class="shrimp-card__name">Тигровые креветки очищенные без хвоста текст текст</p>
+                            <div class="shrimp-card__price d-flex gap-3">
+                                <p class="text-price">2 000 ₽/кг</p>
+                                <p class="text-last-price">1 000 ₽/кг</p>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <ol class="shrimp-card__status"> 
+                                    <li type="circle" class="px-1">В наличии</li>
+                                </ol>
+                                <img class="icon-cart" src="./assets/icons/corsina.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-slide shrimp-card">
+                            <img class="icon" src="./assets/icons/like.svg" alt="">
+                            <img class="shrimp-card__img" src="./assets/images/кревекта.png" alt="shrimp-1">
+                            <p class="shrimp-card__discount">-10%</p>
+                            <p class="shrimp-card__name">Тигровые креветки очищенные без хвоста текст текст</p>
+                            <div class="shrimp-card__price d-flex gap-3">
+                                <p class="text-price">2 000 ₽/кг</p>
+                                <p class="text-last-price">1 000 ₽/кг</p>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <ol class="shrimp-card__status"> 
+                                    <li type="circle" class="px-1">В наличии</li>
+                                </ol>
+                                <img class="icon-cart" src="./assets/icons/corsina.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-slide shrimp-card">
+                            <img class="icon" src="./assets/icons/like.svg" alt="">
+                            <img class="shrimp-card__img" src="./assets/images/кревекта.png" alt="shrimp-1">
+                            <p class="shrimp-card__discount">-10%</p>
+                            <p class="shrimp-card__name">Тигровые креветки очищенные без хвоста текст текст</p>
+                            <div class="shrimp-card__price d-flex gap-3">
+                                <p class="text-price">2 000 ₽/кг</p>
+                                <p class="text-last-price">1 000 ₽/кг</p>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <ol class="shrimp-card__status"> 
+                                    <li type="circle" class="px-1">В наличии</li>
+                                </ol>
+                                <img class="icon-cart" src="./assets/icons/corsina.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-slide shrimp-card">
+                            <img class="icon" src="./assets/icons/like.svg" alt="">
+                            <img class="shrimp-card__img" src="./assets/images/кревекта.png" alt="shrimp-1">
+                            <p class="shrimp-card__discount">-10%</p>
+                            <p class="shrimp-card__name">Тигровые креветки очищенные без хвоста текст текст</p>
+                            <div class="shrimp-card__price d-flex gap-3">
+                                <p class="text-price">2 000 ₽/кг</p>
+                                <p class="text-last-price">1 000 ₽/кг</p>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <ol class="shrimp-card__status"> 
+                                    <li type="circle" class="px-1">В наличии</li>
+                                </ol>
+                                <img class="icon-cart" src="./assets/icons/corsina.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-slide shrimp-card">
+                            <img class="icon" src="./assets/icons/like.svg" alt="">
+                            <img class="shrimp-card__img" src="./assets/images/кревекта.png" alt="shrimp-1">
+                            <p class="shrimp-card__discount">-10%</p>
+                            <p class="shrimp-card__name">Тигровые креветки очищенные без хвоста текст текст</p>
+                            <div class="shrimp-card__price d-flex gap-3">
+                                <p class="text-price">2 000 ₽/кг</p>
+                                <p class="text-last-price">1 000 ₽/кг</p>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <ol class="shrimp-card__status"> 
+                                    <li type="circle" class="px-1">В наличии</li>
+                                </ol>
+                                <img class="icon-cart" src="./assets/icons/corsina.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-slide shrimp-card">
+                            <img class="icon" src="./assets/icons/like.svg" alt="">
+                            <img class="shrimp-card__img" src="./assets/images/кревекта.png" alt="shrimp-1">
+                            <p class="shrimp-card__discount">-10%</p>
+                            <p class="shrimp-card__name">Тигровые креветки очищенные без хвоста текст текст</p>
+                            <div class="shrimp-card__price d-flex gap-3">
+                                <p class="text-price">2 000 ₽/кг</p>
+                                <p class="text-last-price">1 000 ₽/кг</p>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <ol class="shrimp-card__status"> 
+                                    <li type="circle" class="px-1">В наличии</li>
+                                </ol>
+                                <img class="icon-cart" src="./assets/icons/corsina.svg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- about-us -->
             <section class="about-us d-flex justify-content-between">
                 <div class="row h-100 w-100 " style="min-height: 470px;">
                     <div class="col-md-6 position-relative p-0">
@@ -194,6 +359,169 @@
                 </div>
             </section>
 
+            <!-- popular -->
+            <section class="container-xl">
+                <div class="d-flex justify-content-between mb-3">
+                    <h2>Популярные товары</h2>
+                    <div class="d-flex gap-2">
+                        <div class="card-button-prev"><img src="assets/icons/button-arrow-back.svg" alt="button-arrow-back"></div>
+                        <div class="card-button-next"><img src="assets/icons/button-arrow-next.svg" alt="button-arrow-next"></div>
+                    </div>
+                </div>
+                <div class="swiper swiper-cards">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide shrimp-card">
+                            <img class="icon" src="./assets/icons/like.svg" alt="">
+                            <img class="shrimp-card__img" src="./assets/images/кревекта.png" alt="shrimp-1">
+                            <p class="shrimp-card__discount">-10%</p>
+                            <p class="shrimp-card__name">Тигровые креветки очищенные без хвоста текст текст</p>
+                            <div class="shrimp-card__price d-flex gap-3">
+                                <p class="text-price">2 000 ₽/кг</p>
+                                <p class="text-last-price">1 000 ₽/кг</p>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <ol class="shrimp-card__status"> 
+                                    <li type="circle" class="px-1">В наличии</li>
+                                </ol>
+                                <img class="icon-cart" src="./assets/icons/corsina.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-slide shrimp-card">
+                            <img class="icon" src="./assets/icons/like.svg" alt="">
+                            <img class="shrimp-card__img" src="./assets/images/кревекта.png" alt="shrimp-1">
+                            <p class="shrimp-card__discount">-10%</p>
+                            <p class="shrimp-card__name">Тигровые креветки очищенные без хвоста текст текст</p>
+                            <div class="shrimp-card__price d-flex gap-3">
+                                <p class="text-price">2 000 ₽/кг</p>
+                                <p class="text-last-price">1 000 ₽/кг</p>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <ol class="shrimp-card__status"> 
+                                    <li type="circle" class="px-1">В наличии</li>
+                                </ol>
+                                <img class="icon-cart" src="./assets/icons/corsina.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-slide shrimp-card">
+                            <img class="icon" src="./assets/icons/like.svg" alt="">
+                            <img class="shrimp-card__img" src="./assets/images/кревекта.png" alt="shrimp-1">
+                            <p class="shrimp-card__discount">-10%</p>
+                            <p class="shrimp-card__name">Тигровые креветки очищенные без хвоста текст текст</p>
+                            <div class="shrimp-card__price d-flex gap-3">
+                                <p class="text-price">2 000 ₽/кг</p>
+                                <p class="text-last-price">1 000 ₽/кг</p>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <ol class="shrimp-card__status"> 
+                                    <li type="circle" class="px-1">В наличии</li>
+                                </ol>
+                                <img class="icon-cart" src="./assets/icons/corsina.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-slide shrimp-card">
+                            <img class="icon" src="./assets/icons/like.svg" alt="">
+                            <img class="shrimp-card__img" src="./assets/images/кревекта.png" alt="shrimp-1">
+                            <p class="shrimp-card__discount">-10%</p>
+                            <p class="shrimp-card__name">Тигровые креветки очищенные без хвоста текст текст</p>
+                            <div class="shrimp-card__price d-flex gap-3">
+                                <p class="text-price">2 000 ₽/кг</p>
+                                <p class="text-last-price">1 000 ₽/кг</p>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <ol class="shrimp-card__status"> 
+                                    <li type="circle" class="px-1">В наличии</li>
+                                </ol>
+                                <img class="icon-cart" src="./assets/icons/corsina.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-slide shrimp-card">
+                            <img class="icon" src="./assets/icons/like.svg" alt="">
+                            <img class="shrimp-card__img" src="./assets/images/кревекта.png" alt="shrimp-1">
+                            <p class="shrimp-card__discount">-10%</p>
+                            <p class="shrimp-card__name">Тигровые креветки очищенные без хвоста текст текст</p>
+                            <div class="shrimp-card__price d-flex gap-3">
+                                <p class="text-price">2 000 ₽/кг</p>
+                                <p class="text-last-price">1 000 ₽/кг</p>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <ol class="shrimp-card__status"> 
+                                    <li type="circle" class="px-1">В наличии</li>
+                                </ol>
+                                <img class="icon-cart" src="./assets/icons/corsina.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-slide shrimp-card">
+                            <img class="icon" src="./assets/icons/like.svg" alt="">
+                            <img class="shrimp-card__img" src="./assets/images/кревекта.png" alt="shrimp-1">
+                            <p class="shrimp-card__discount">-10%</p>
+                            <p class="shrimp-card__name">Тигровые креветки очищенные без хвоста текст текст</p>
+                            <div class="shrimp-card__price d-flex gap-3">
+                                <p class="text-price">2 000 ₽/кг</p>
+                                <p class="text-last-price">1 000 ₽/кг</p>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <ol class="shrimp-card__status"> 
+                                    <li type="circle" class="px-1">В наличии</li>
+                                </ol>
+                                <img class="icon-cart" src="./assets/icons/corsina.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-slide shrimp-card">
+                            <img class="icon" src="./assets/icons/like.svg" alt="">
+                            <img class="shrimp-card__img" src="./assets/images/кревекта.png" alt="shrimp-1">
+                            <p class="shrimp-card__discount">-10%</p>
+                            <p class="shrimp-card__name">Тигровые креветки очищенные без хвоста текст текст</p>
+                            <div class="shrimp-card__price d-flex gap-3">
+                                <p class="text-price">2 000 ₽/кг</p>
+                                <p class="text-last-price">1 000 ₽/кг</p>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <ol class="shrimp-card__status"> 
+                                    <li type="circle" class="px-1">В наличии</li>
+                                </ol>
+                                <img class="icon-cart" src="./assets/icons/corsina.svg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- interesting -->
+            <section class="popular-cars">
+                <div class="popular-cars__header">
+                    <h2>Интересное</h2>
+                    <a href="#">Все статьи <img src="./assets/images/button-arrow.png" alt="button-arrow"></a>
+                </div>
+                <div class="grid-container-two">
+                    <div class="popular-card card-1">
+                        <h2>Камчатский краб, что в нем едят</h2>
+                        <img src="./assets/images/Interesting-image-1.png" alt="image-1">
+                    </div>
+                    <div class="popular-card card-2">
+                        <h2>Как не бояться пробовать новое</h2>
+                        <img src="./assets/images/Interesting-image-2.png" alt="image-2">
+                    </div>
+                    <div class="popular-card card-3">
+                        <h2>Скажите, это лосось или сёмга?</h2>
+                        <img src="./assets/images/Interesting-image-3.png" alt="image-3">
+                    </div>
+                    <div class="popular-card card-4">
+                        <h2>Как правильно чистить креветки?</h2>
+                        <img src="./assets/images/Interesting-image-4.png" alt="image-4">
+                    </div>
+                    <div class="popular-card card-5">
+                        <h2>Интересные факты о морском гребешке</h2>
+                        <img src="./assets/images/Interesting-image-5.png" alt="image-5">
+                    </div>
+                    <div class="popular-card card-6">
+                        <h2>Почему тилапия такая полезная?</h2>
+                        <img src="./assets/images/Interesting-image-6.png" alt="image-6">
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- about-us -->
             <section class="about-us d-flex justify-content-between">
                 <div class="row h-100 w-100 " style="min-height: 470px;">
                     <div class="col-md-6 position-relative p-0">
@@ -213,16 +541,16 @@
                 </div>
             </section>
 
-            
+            <!-- recepies -->
             <section class="container-xl">
                 <div class="d-flex justify-content-between mb-3">
                     <h2>Рецепты</h2>
                     <div class="d-flex gap-2">
-                        <div class="recepies-button-prev"><img src="assets/icons/button-arrow-back.svg" alt="button-arrow-back"></div>
-                        <div class="recepies-button-next"><img src="assets/icons/button-arrow-next.svg" alt="button-arrow-next"></div>
+                        <div class="card-button-prev"><img src="assets/icons/button-arrow-back.svg" alt="button-arrow-back"></div>
+                        <div class="card-button-next"><img src="assets/icons/button-arrow-next.svg" alt="button-arrow-next"></div>
                     </div>
                 </div>
-                <div class="swiper swiper-recepies">
+                <div class="swiper swiper-cards">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide recepies-card">
                             <img class="recepies-card__img" src="./assets/images/Rectangle 789-1.jpg" alt="recepies-1">
@@ -407,31 +735,32 @@
             },
         });
 
-        
         const swiper2Config = {
             loop: true,
-            spaceBetween: 30,
+            spaceBetween: 20,
             navigation: {
-                nextEl: '.recepies-button-next',
-                prevEl: '.recepies-button-prev',
+                nextEl: '.card-button-next',
+                prevEl: '.card-button-prev',
             },
             breakpoints: {
                 0: {
                     slidesPerView: 1,
                 },
                 576: {
+                    slidesPerView: 2,
+                },
+                640: {
                     slidesPerView: 3,
                 },
-                768: {
+                800: {
                     slidesPerView: 4,
                 },
-                992: {
+                1200: {
                     slidesPerView: 5,
                 },
             }
         };
-
-        const _swiper2 = new Swiper('.swiper-recepies', swiper2Config);
+        const _swiper2 = new Swiper('.swiper-cards', swiper2Config);
     });
 
     function toggleDropdownMenu(event) {
