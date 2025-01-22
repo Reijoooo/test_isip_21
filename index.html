@@ -20,16 +20,697 @@
 </head>
 <body>
     <div class="wrapper">
-        <header class="header">
-            <div class="container">Шапка сайта</div>
+        <div class="container d-none d-lg-block">
+            <div class="py-3 d-flex justify-content-between flex-column-reverse flex-lg-row">
+                <div class="d-flex flex-column flex-lg-row">
+                    <div>
+                        <img class="icon" src="./assets/icons/location.svg" alt="location">
+                        <span class="pe-3">г. Екатеринбург</span>
+                    </div>
+                    <div>
+                        <img class="icon" src="./assets/icons/call.svg" alt="call">
+                        <span>+7 (922) 181 36 75</span>
+                        <span class="text-muted">(10:00–23:00)</span>
+                    </div>
+                </div>
+                <nav class="nav">
+                    <a class="nav-link" href="#">Оплата и доставка</a>
+                    <a class="nav-link" href="#">О компании</a>
+                    <a class="nav-link" href="#">Контакты</a>
+                    <a class="nav-link" href="#">Статьи</a>
+                </nav>
+            </div>
+        </div>
+        <header class="header container">
+            <nav class="navbar navbar-expand-lg">
+                <div class="d-flex align-items-center">
+                    <button class="navbar-toggler btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu" aria-controls="offcanvasMenu" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <img class="logo" src="./assets/images/logo.png" alt="Logo">
+                </div>
+                <div class="collapse navbar-collapse me-auto" id="navbarSupportedContent">
+                    <ul class="navbar-nav mb-2 mb-lg-0">
+                        <li class="nav-item dropdown">
+                            <a class="btn btn-primary btn-lg dropdown-toggle mx-3 px-4" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Каталог
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item fs-6 text-muted" href="#">Собственное производство</a></li>
+                                <li><a class="dropdown-item fs-6 text-muted" href="#">Икра красная </a></li>
+                                <li><a class="dropdown-item fs-6 text-muted" href="#">Консервация и деликатесы </a></li>
+                                <li><a class="dropdown-item fs-6 text-muted" href="#">Мясо, птица</a></li>
+                                <li><a class="dropdown-item fs-6 text-muted" href="#">Рыба</a></li>
+                                <li><a class="dropdown-item fs-6 text-muted" href="#">Морепродукты</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <form class="search-input-wrapper d-flex" role="search">
+                        <input class="search-input form-control me-2" type="search" placeholder="Найти товар" aria-label="Search">
+                        <button class="search-icon pb-2" type="submit">
+                            <img src="./assets/icons/search-01.svg" alt="Search">
+                        </button>
+                    </form>
+                </div>
+                <div class="header-icons">
+                    <img class="icon me-3" src="./assets/icons/chevron-forward.svg" alt="Chevron Forward">
+                    <img class="icon" src="./assets/icons/favourite.svg" alt="Favourite">
+                </div>
+            </nav>
         </header>
+    
+        <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasMenu" aria-labelledby="offcanvasMenuLabel" style="width: 80%;">
+            <div class="offcanvas-header">
+                <button type="button" class="btn-close m-0" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body pt-0">
+                <ul class="navbar-nav mb-2 mb-lg-0">
+                    <li class="nav-item dropdown">
+                        <span class="dropdown-toggle mx-3" onclick="toggleDropdown(event)" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Каталог
+                        </span>
+                        <ul class="dropdown static-dropdown">
+                            <li><a class="dropdown-item ps-3 fs-7 text-muted" href="#">Собственное производство</a></li>
+                            <li><a class="dropdown-item ps-3 fs-7 text-muted" href="#">Икра красная </a></li>
+                            <li><a class="dropdown-item ps-3 fs-7 text-muted" href="#">Консервация и деликатесы </a></li>
+                            <li><a class="dropdown-item ps-3 fs-7 text-muted" href="#">Мясо, птица</a></li>
+                            <li><a class="dropdown-item ps-3 fs-7 text-muted" href="#">Рыба</a></li>
+                            <li><a class="dropdown-item ps-3 fs-7 text-muted" href="#">Морепродукты</a></li>
+                        </ul>
+                    </li>
+                </ul>
 
+                <nav class="nav flex-column">
+                    <a class="nav-link" href="#">Оплата и доставка</a>
+                    <a class="nav-link" href="#">О компании</a>
+                    <a class="nav-link" href="#">Контакты</a>
+                    <a class="nav-link" href="#">Статьи</a>
+                </nav>
+
+                <div>
+                    <div>
+                        <img class="icon" src="./assets/icons/location.svg" alt="Location">
+                        <span class="pe-3">г. Екатеринбург</span>
+                    </div>
+                    <div>
+                        <img class="icon" src="./assets/icons/call.svg" alt="Call">
+                        <span>+7 (922) 181 36 75</span>
+                        <span class="text-muted">(10:00–23:00)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
         <main class="main">
-            <div class="container">Главная страница</div>
+
+            <section>
+                <div class="swiper-container my-4">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide hero-section" style="background-image: url('../assets/images/main-page.jpg');">
+                            <div class="container-xl">
+                                <h1 class="display-4 fw-medium d-flex flex-column">
+                                    <span class="text-accent">Если хочется чего-то,</span> но не понятно чего
+                                </h1>
+                                <p class="lead mt-3">Знайте - морепродуктов!</p>
+                                <div class="d-flex align-items-center mt-5 catalog-btn">
+                                    <a href="#catalog" class="btn btn-secondary btn-lg px-5 py-3">Перейти в каталог</a>
+                                    <div class="d-flex swiper-buttons">
+                                        <div class="swiper-button-prev"></div>
+                                        <div class="swiper-button-next"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide hero-section" style="background-image: url('../assets/images/main-page-1.jpg');">
+                            <div class="container-xl">
+                                <h1 class="display-4 fw-medium d-flex flex-column">
+                                    <span class="text-accent">Если хочется чего-то,</span> но не понятно чего
+                                </h1>
+                                <p class="lead mt-3">Знайте - морепродуктов!</p>
+                                <div class="d-flex align-items-center mt-5 catalog-btn">
+                                    <a href="#catalog" class="btn btn-secondary btn-lg px-5 py-3">Перейти в каталог</a>
+                                    <div class="d-flex swiper-buttons">
+                                        <div class="swiper-button-prev"></div>
+                                        <div class="swiper-button-next"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <div class="marquee">
+                <div class="marquee-content">
+                    <p class="marquee-content__item">Акция месяца – скидка 10% на всю консервацию</p>
+                    <p class="marquee-content__item">Акция месяца – скидка 10% на всю консервацию</p>
+                    <p class="marquee-content__item">Акция месяца – скидка 10% на всю консервацию</p>
+                    <p class="marquee-content__item">Акция месяца – скидка 10% на всю консервацию</p>
+                    <p class="marquee-content__item">Акция месяца – скидка 10% на всю консервацию</p>
+                    <p class="marquee-content__item">Акция месяца – скидка 10% на всю консервацию</p>
+                    <p class="marquee-content__item">Акция месяца – скидка 10% на всю консервацию</p>
+                    <p class="marquee-content__item">Акция месяца – скидка 10% на всю консервацию</p>
+                    <p class="marquee-content__item">Акция месяца – скидка 10% на всю консервацию</p>
+                </div>
+            </div>
+
+            <section class="popular-cars">
+                <div class="popular-cars__header">
+                    <h2>Популярные категории</h2>
+                    <a href="#">Все категории <img src="./assets/images/button-arrow.png" alt="button-arrow"></a>
+                </div>
+                <div class="grid-container-one">
+                    <div class="popular-card card-large">
+                        <h2>Собственное производство</h2>
+                        <img src="./assets/images/popular-image-1.png" alt="image-1">
+                    </div>
+                    <div class="popular-card">
+                        <h2>Икра красная</h2>
+                        <img src="./assets/images/popular-image-2.png" alt="image-2">
+                    </div>
+                    <div class="popular-card">
+                        <h2>Консервация и деликатесы</h2>
+                        <img src="./assets/images/popular-image-3.png" alt="image-3">
+                    </div>
+                    <div class="popular-card">
+                        <h2>Мясо, птица</h2>
+                        <img src="./assets/images/popular-image-4.png" alt="image-4">
+                    </div>
+                    <div class="popular-card">
+                        <h2>Рыба</h2>
+                        <img src="./assets/images/popular-image-5.png" alt="image-5">
+                    </div>
+                    <div class="popular-card card-large card-grig-one-last">
+                        <h2>Морепродукты</h2>
+                        <img src="./assets/images/popular-image-6.png" alt="image-6">
+                    </div>
+                </div>
+            </section>
+
+
+             <!-- popular -->
+             <section class="container-xl">
+                <div class="d-flex justify-content-between mb-3">
+                    <h2>Новинки</h2>
+                    <div class="d-flex gap-2">
+                        <div class="card-button-prev"><img src="assets/icons/button-arrow-back.svg" alt="button-arrow-back"></div>
+                        <div class="card-button-next"><img src="assets/icons/button-arrow-next.svg" alt="button-arrow-next"></div>
+                    </div>
+                </div>
+                <div class="swiper swiper-cards">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide shrimp-card">
+                            <img class="icon" src="./assets/icons/like.svg" alt="">
+                            <img class="shrimp-card__img" src="./assets/images/кревекта.png" alt="shrimp-1">
+                            <p class="shrimp-card__discount">-10%</p>
+                            <p class="shrimp-card__name">Тигровые креветки очищенные без хвоста текст текст</p>
+                            <div class="shrimp-card__price d-flex gap-3">
+                                <p class="text-price">2 000 ₽/кг</p>
+                                <p class="text-last-price">1 000 ₽/кг</p>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <ol class="shrimp-card__status"> 
+                                    <li type="circle" class="px-1">В наличии</li>
+                                </ol>
+                                <img class="icon-cart" src="./assets/icons/corsina.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-slide shrimp-card">
+                            <img class="icon" src="./assets/icons/like.svg" alt="">
+                            <img class="shrimp-card__img" src="./assets/images/кревекта.png" alt="shrimp-1">
+                            <p class="shrimp-card__discount">-10%</p>
+                            <p class="shrimp-card__name">Тигровые креветки очищенные без хвоста текст текст</p>
+                            <div class="shrimp-card__price d-flex gap-3">
+                                <p class="text-price">2 000 ₽/кг</p>
+                                <p class="text-last-price">1 000 ₽/кг</p>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <ol class="shrimp-card__status"> 
+                                    <li type="circle" class="px-1">В наличии</li>
+                                </ol>
+                                <img class="icon-cart" src="./assets/icons/corsina.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-slide shrimp-card">
+                            <img class="icon" src="./assets/icons/like.svg" alt="">
+                            <img class="shrimp-card__img" src="./assets/images/кревекта.png" alt="shrimp-1">
+                            <p class="shrimp-card__discount">-10%</p>
+                            <p class="shrimp-card__name">Тигровые креветки очищенные без хвоста текст текст</p>
+                            <div class="shrimp-card__price d-flex gap-3">
+                                <p class="text-price">2 000 ₽/кг</p>
+                                <p class="text-last-price">1 000 ₽/кг</p>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <ol class="shrimp-card__status"> 
+                                    <li type="circle" class="px-1">В наличии</li>
+                                </ol>
+                                <img class="icon-cart" src="./assets/icons/corsina.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-slide shrimp-card">
+                            <img class="icon" src="./assets/icons/like.svg" alt="">
+                            <img class="shrimp-card__img" src="./assets/images/кревекта.png" alt="shrimp-1">
+                            <p class="shrimp-card__discount">-10%</p>
+                            <p class="shrimp-card__name">Тигровые креветки очищенные без хвоста текст текст</p>
+                            <div class="shrimp-card__price d-flex gap-3">
+                                <p class="text-price">2 000 ₽/кг</p>
+                                <p class="text-last-price">1 000 ₽/кг</p>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <ol class="shrimp-card__status"> 
+                                    <li type="circle" class="px-1">В наличии</li>
+                                </ol>
+                                <img class="icon-cart" src="./assets/icons/corsina.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-slide shrimp-card">
+                            <img class="icon" src="./assets/icons/like.svg" alt="">
+                            <img class="shrimp-card__img" src="./assets/images/кревекта.png" alt="shrimp-1">
+                            <p class="shrimp-card__discount">-10%</p>
+                            <p class="shrimp-card__name">Тигровые креветки очищенные без хвоста текст текст</p>
+                            <div class="shrimp-card__price d-flex gap-3">
+                                <p class="text-price">2 000 ₽/кг</p>
+                                <p class="text-last-price">1 000 ₽/кг</p>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <ol class="shrimp-card__status"> 
+                                    <li type="circle" class="px-1">В наличии</li>
+                                </ol>
+                                <img class="icon-cart" src="./assets/icons/corsina.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-slide shrimp-card">
+                            <img class="icon" src="./assets/icons/like.svg" alt="">
+                            <img class="shrimp-card__img" src="./assets/images/кревекта.png" alt="shrimp-1">
+                            <p class="shrimp-card__discount">-10%</p>
+                            <p class="shrimp-card__name">Тигровые креветки очищенные без хвоста текст текст</p>
+                            <div class="shrimp-card__price d-flex gap-3">
+                                <p class="text-price">2 000 ₽/кг</p>
+                                <p class="text-last-price">1 000 ₽/кг</p>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <ol class="shrimp-card__status"> 
+                                    <li type="circle" class="px-1">В наличии</li>
+                                </ol>
+                                <img class="icon-cart" src="./assets/icons/corsina.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-slide shrimp-card">
+                            <img class="icon" src="./assets/icons/like.svg" alt="">
+                            <img class="shrimp-card__img" src="./assets/images/кревекта.png" alt="shrimp-1">
+                            <p class="shrimp-card__discount">-10%</p>
+                            <p class="shrimp-card__name">Тигровые креветки очищенные без хвоста текст текст</p>
+                            <div class="shrimp-card__price d-flex gap-3">
+                                <p class="text-price">2 000 ₽/кг</p>
+                                <p class="text-last-price">1 000 ₽/кг</p>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <ol class="shrimp-card__status"> 
+                                    <li type="circle" class="px-1">В наличии</li>
+                                </ol>
+                                <img class="icon-cart" src="./assets/icons/corsina.svg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+
+
+            <section class="about-us d-flex justify-content-between">
+                <div class="row h-100 w-100 " style="min-height: 470px;">
+                    <div class="col-md-6 position-relative p-0">
+                        <div class="background-image" style="background-image: url('./assets/images/fish_fon.png');">
+                            <div class="text-container text-start" style="padding: 80px;">
+                                <h2 class="mb-4  " >О нас</h2>
+                                <p>ГурманМаркет это сервис по доставке охлажденной рыбы, морепродуктов, деликатесов и многого другого к вам домой. <br> <br> Рыбку чистим, режем упаковываем и привозим в удобное вам время. <br> <br> Теперь, чтоб приготовить ужин, не нужно ездить по магазинам в поисках качественных продуктов. Мы уже это сделали.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 position-relative p-0">
+                        <div class="background-image" style="background-image: url('./assets/images/О нас.png');">
+                        </div> 
+                    </div>
+                </div>
+            </section>
+
+
+             
+            <!-- popular -->
+            <section class="container-xl">
+                <div class="d-flex justify-content-between mb-3">
+                    <h2>Популярные товары</h2>
+                    <div class="d-flex gap-2">
+                        <div class="card-button-prev"><img src="assets/icons/button-arrow-back.svg" alt="button-arrow-back"></div>
+                        <div class="card-button-next"><img src="assets/icons/button-arrow-next.svg" alt="button-arrow-next"></div>
+                    </div>
+                </div>
+                <div class="swiper swiper-cards">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide shrimp-card">
+                            <img class="icon" src="./assets/icons/like.svg" alt="">
+                            <img class="shrimp-card__img" src="./assets/images/кревекта.png" alt="shrimp-1">
+                            <p class="shrimp-card__discount">-10%</p>
+                            <p class="shrimp-card__name">Тигровые креветки очищенные без хвоста текст текст</p>
+                            <div class="shrimp-card__price d-flex gap-3">
+                                <p class="text-price">2 000 ₽/кг</p>
+                                <p class="text-last-price">1 000 ₽/кг</p>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <ol class="shrimp-card__status"> 
+                                    <li type="circle" class="px-1">В наличии</li>
+                                </ol>
+                                <img class="icon-cart" src="./assets/icons/corsina.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-slide shrimp-card">
+                            <img class="icon" src="./assets/icons/like.svg" alt="">
+                            <img class="shrimp-card__img" src="./assets/images/кревекта.png" alt="shrimp-1">
+                            <p class="shrimp-card__discount">-10%</p>
+                            <p class="shrimp-card__name">Тигровые креветки очищенные без хвоста текст текст</p>
+                            <div class="shrimp-card__price d-flex gap-3">
+                                <p class="text-price">2 000 ₽/кг</p>
+                                <p class="text-last-price">1 000 ₽/кг</p>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <ol class="shrimp-card__status"> 
+                                    <li type="circle" class="px-1">В наличии</li>
+                                </ol>
+                                <img class="icon-cart" src="./assets/icons/corsina.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-slide shrimp-card">
+                            <img class="icon" src="./assets/icons/like.svg" alt="">
+                            <img class="shrimp-card__img" src="./assets/images/кревекта.png" alt="shrimp-1">
+                            <p class="shrimp-card__discount">-10%</p>
+                            <p class="shrimp-card__name">Тигровые креветки очищенные без хвоста текст текст</p>
+                            <div class="shrimp-card__price d-flex gap-3">
+                                <p class="text-price">2 000 ₽/кг</p>
+                                <p class="text-last-price">1 000 ₽/кг</p>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <ol class="shrimp-card__status"> 
+                                    <li type="circle" class="px-1">В наличии</li>
+                                </ol>
+                                <img class="icon-cart" src="./assets/icons/corsina.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-slide shrimp-card">
+                            <img class="icon" src="./assets/icons/like.svg" alt="">
+                            <img class="shrimp-card__img" src="./assets/images/кревекта.png" alt="shrimp-1">
+                            <p class="shrimp-card__discount">-10%</p>
+                            <p class="shrimp-card__name">Тигровые креветки очищенные без хвоста текст текст</p>
+                            <div class="shrimp-card__price d-flex gap-3">
+                                <p class="text-price">2 000 ₽/кг</p>
+                                <p class="text-last-price">1 000 ₽/кг</p>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <ol class="shrimp-card__status"> 
+                                    <li type="circle" class="px-1">В наличии</li>
+                                </ol>
+                                <img class="icon-cart" src="./assets/icons/corsina.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-slide shrimp-card">
+                            <img class="icon" src="./assets/icons/like.svg" alt="">
+                            <img class="shrimp-card__img" src="./assets/images/кревекта.png" alt="shrimp-1">
+                            <p class="shrimp-card__discount">-10%</p>
+                            <p class="shrimp-card__name">Тигровые креветки очищенные без хвоста текст текст</p>
+                            <div class="shrimp-card__price d-flex gap-3">
+                                <p class="text-price">2 000 ₽/кг</p>
+                                <p class="text-last-price">1 000 ₽/кг</p>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <ol class="shrimp-card__status"> 
+                                    <li type="circle" class="px-1">В наличии</li>
+                                </ol>
+                                <img class="icon-cart" src="./assets/icons/corsina.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-slide shrimp-card">
+                            <img class="icon" src="./assets/icons/like.svg" alt="">
+                            <img class="shrimp-card__img" src="./assets/images/кревекта.png" alt="shrimp-1">
+                            <p class="shrimp-card__discount">-10%</p>
+                            <p class="shrimp-card__name">Тигровые креветки очищенные без хвоста текст текст</p>
+                            <div class="shrimp-card__price d-flex gap-3">
+                                <p class="text-price">2 000 ₽/кг</p>
+                                <p class="text-last-price">1 000 ₽/кг</p>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <ol class="shrimp-card__status"> 
+                                    <li type="circle" class="px-1">В наличии</li>
+                                </ol>
+                                <img class="icon-cart" src="./assets/icons/corsina.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-slide shrimp-card">
+                            <img class="icon" src="./assets/icons/like.svg" alt="">
+                            <img class="shrimp-card__img" src="./assets/images/кревекта.png" alt="shrimp-1">
+                            <p class="shrimp-card__discount">-10%</p>
+                            <p class="shrimp-card__name">Тигровые креветки очищенные без хвоста текст текст</p>
+                            <div class="shrimp-card__price d-flex gap-3">
+                                <p class="text-price">2 000 ₽/кг</p>
+                                <p class="text-last-price">1 000 ₽/кг</p>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <ol class="shrimp-card__status"> 
+                                    <li type="circle" class="px-1">В наличии</li>
+                                </ol>
+                                <img class="icon-cart" src="./assets/icons/corsina.svg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="popular-cars">
+                <div class="popular-cars__header">
+                    <h2>Интересное</h2>
+                    <a href="#">Все статьи <img src="./assets/images/button-arrow.png" alt="button-arrow"></a>
+                </div>
+                <div class="grid-container-two">
+                    <div class="popular-card card-1">
+                        <h2>Камчатский краб, что в нем едят</h2>
+                        <img src="./assets/images/Interesting-image-1.png" alt="image-1">
+                    </div>
+                    <div class="popular-card card-2">
+                        <h2>Как не бояться пробовать новое</h2>
+                        <img src="./assets/images/Interesting-image-2.png" alt="image-2">
+                    </div>
+                    <div class="popular-card card-3">
+                        <h2>Скажите, это лосось или сёмга?</h2>
+                        <img src="./assets/images/Interesting-image-3.png" alt="image-3">
+                    </div>
+                    <div class="popular-card card-4">
+                        <h2>Как правильно чистить креветки?</h2>
+                        <img src="./assets/images/Interesting-image-4.png" alt="image-4">
+                    </div>
+                    <div class="popular-card card-5">
+                        <h2>Интересные факты о морском гребешке</h2>
+                        <img src="./assets/images/Interesting-image-5.png" alt="image-5">
+                    </div>
+                    <div class="popular-card card-6">
+                        <h2>Почему тилапия такая полезная?</h2>
+                        <img src="./assets/images/Interesting-image-6.png" alt="image-6">
+                    </div>
+                </div>
+            </section>
+
+            
+
+            <section class="about-us d-flex justify-content-between">
+                <div class="row h-100 w-100 " style="min-height: 470px;">
+                    <div class="col-md-6 position-relative p-0">
+                        <div class="background-image" style="background-image: url('./assets/images/Остались\ вопросы_.png');">
+                           
+                        </div>
+                    </div>
+                    <div class="col-md-6 position-relative p-0">
+                        <div class="background-image" style="background-image: url('./assets/images/fish_fon.png');">
+                            <div class="text-container text-start" style="padding: 80px;">
+                                <h2 class="mb-4  " >Остались вопросы?</h2>
+                                <p>Оставьте свои контактные данные и наши менеджеры свяжутся с вами в ближайшее время</p>
+                                <a href="#" class="btn btn-primary">Задать вопрос</a>
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+            </section>
+
+            
+                <section class="container-xl">
+                    <div class="d-flex justify-content-between mb-3">
+                        <h2>Рецепты</h2>
+                        <div class="d-flex gap-2">
+                            <div class="recepies-button-prev"><img src="assets/icons/button-arrow-back.svg" alt="button-arrow-back"></div>
+                            <div class="recepies-button-next"><img src="assets/icons/button-arrow-next.svg" alt="button-arrow-next"></div>
+                        </div>
+                    </div>
+                    <div class="swiper swiper-recepies">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide recepies-card">
+                                <img class="recepies-card__img" src="./assets/images/Rectangle 789-1.jpg" alt="recepies-1">
+                                <p class="recepies-card__name">Рецепт соуса для приготовления форели</p>
+                            </div>
+                            <div class="swiper-slide recepies-card">
+                                <img class="recepies-card__img" src="./assets/images/Rectangle 789.jpg" alt="recepies-2">
+                                <p class="recepies-card__name">Рецепт блюда из форели и лангустина</p>
+                            </div>
+                            <div class="swiper-slide recepies-card">
+                                <img class="recepies-card__img" src="./assets/images/Rectangle 789-2.jpg" alt="recepies-3">
+                                <p class="recepies-card__name">Тилапия на подушке из нежнейшего соуса</p>
+                            </div>
+                            <div class="swiper-slide recepies-card">
+                                <img class="recepies-card__img" src="./assets/images/Rectangle 789-3.jpg" alt="recepies-4">
+                                <p class="recepies-card__name">Мезе с добавлением морепродуктов</p>
+                            </div>
+                            <div class="swiper-slide recepies-card">
+                                <img class="recepies-card__img" src="./assets/images/Rectangle 789-4.jpg" alt="recepies-5">
+                                <p class="recepies-card__name">Как вкусно приготовить щупальца осьминога</p>
+                            </div>
+                            <div class="swiper-slide recepies-card">
+                                <img class="recepies-card__img" src="./assets/images/Rectangle 789-1.jpg" alt="recepies-6">
+                                <p class="recepies-card__name">Ещё один рецепт форели</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+             <!-- FAQ -->
+             <section class="container-xl">
+                <h4 class="mb-4">FAQ</h4>
+                <div class="accordion" id="faqAccordion">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                А продукция безопасна?
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Проверим на вас
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                В течение какого времени приедет заказ?
+                            </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                В этом веку точно приедет
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                Сколько стоит доставка?
+                            </button>
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                В жизни есть вопросы и поважнее денег
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingFour">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                Я живу за городом. Привезете?
+                            </button>
+                        </h2>
+                        <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Еще чего хочешь?
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- map -->
+            <section class="d-flex justify-content-between">
+                <div class="row h-100 w-100" style="min-height: 470px;">
+                    <div class="background-card col-12 col-md-5 d-flex align-items-center" style="background-image: url('./assets/images/about-bg.jpg');">
+                        <div class="text-container text-start p-4">
+                            <h2 class="mb-4">Контакты</h2>
+                            <p>г. Екатеринбург ул. Шефская д. 101</p>
+                            <p>+7 (922) 181 36 75</p>
+                            <p>+7 (922) 201 95 20</p>
+                            <div>
+                                <img class="icon me-3" src="./assets/icons/telegram.svg" alt="telegram">
+                                <img class="icon" src="./assets/icons/vk.svg" alt="vk">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-7 position-relative p-0">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509424!2d144.9537363153169!3d-37.81627937975159!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf577e1d7b5f8c3e9!2sVictoria%20Market!5e0!3m2!1sen!2sau!4v1614658777587!5m2!1sen!2sau" 
+                            width="100%" 
+                            height="100%" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy">
+                        </iframe>
+                    </div>
+                </div>
+            </section>
+
+
         </main>
 
+
+
         <footer class="footer">
-            <div class="container">Подвал сайта</div>
+            <div class="container">
+                <div class="row text-start text-lg-start">
+                    <div class="col d-flex flex-column justify-content-between mb-2">
+                        <img class="logo" src="./assets/images/logo-light.png" alt="logo">
+                        <p class="small" style="font-size: 0.7rem; font-weight: 300;">Paspaботано в <a href="#" class="text-white">LOBUT DIGITAL</a></p>
+                    </div>
+                    <div class="col">
+                    <h6 class="text-start">Каталог</h6>
+                    <ul class=" list-inline text-start">
+                        <li >Охлажденная рыба</li>
+                        <li >Икра</li>
+                        <li >Морепродукты</li>
+                        <li >Рыба</li>
+                    </ul>
+                    </div>
+                    <div class="col">
+                        <h6 class="text-start">Категории</h6>
+                        <ul class="list-inline text-start">
+                            <li >Морепродукты</li>
+                            <li >Собственное производство </li>
+                            <li >Мясо, птица</li>
+                            <li >Консервация и деликатесы</li>
+                        </ul>
+                    </div>
+                    <div class="col">
+                        <h6 class="text-start">Информация</h6>
+                        <ul class="list-inline text-start">
+                            <li >Блог</li>
+                            <li >Вопросы и ответы</li>
+                            <li >Политика конфиденциальности</li>
+                            <li >Карта сайта</li>
+                        </ul>
+                    </div>
+                    <div class="col">
+                        <h6 class="text-start">Контакты</h6>
+                        <ul class="list-inline text-start">
+                            <li >г. Екатеринбург ул. Шефская д. 101</li>
+                            <li >+7 (922) 181 36 75</li>
+                            <li >+7 (922) 201 95 20</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </footer>
     </div>
 
@@ -41,3 +722,93 @@
     <script src="js/scripts.js"></script>
 </body>
 </html>
+
+<script>
+    const swiper = new Swiper('.swiper-container', {
+        slidesPerView: 1,
+        effect: 'fade',
+        allowTouchMove: false,
+        slideToClickedSlide: false,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    });
+   
+    document.addEventListener('DOMContentLoaded', function () {
+        const heroSwiper = new Swiper('.swiper-container', {
+            slidesPerView: 1,
+            effect: 'fade',
+            allowTouchMove: false,
+            slideToClickedSlide: false,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+
+        
+        const swiper2Config = {
+            loop: true,
+            spaceBetween: 30,
+            navigation: {
+                nextEl: '.recepies-button-next',
+                prevEl: '.recepies-button-prev',
+            },
+            breakpoints: {
+                0: {
+                    slidesPerView: 1,
+                },
+                576: {
+                    slidesPerView: 3,
+                },
+                768: {
+                    slidesPerView: 4,
+                },
+                992: {
+                    slidesPerView: 5,
+                },
+            }
+        };
+
+        const _swiper2 = new Swiper('.swiper-recepies', swiper2Config);
+    });
+
+
+    
+    const swiper2Config = {
+            loop: true,
+            spaceBetween: 20,
+            navigation: {
+                nextEl: '.card-button-next',
+                prevEl: '.card-button-prev',
+            },
+            breakpoints: {
+                0: {
+                    slidesPerView: 1,
+                },
+                576: {
+                    slidesPerView: 3,
+                },
+                768: {
+                    slidesPerView: 4,
+                },
+                992: {
+                    slidesPerView: 5,
+                },
+            }
+        };
+        const _swiper2 = new Swiper('.swiper-cards', swiper2Config);
+
+
+    function toggleDropdown(event) {
+        event.preventDefault();
+        const dropdownMenu = event.target.nextElementSibling;
+
+        if (dropdownMenu) {
+            dropdownMenu.classList.toggle('show');
+        } else {
+            console.error('Dropdown menu not found');
+        }
+    }
+</script>
