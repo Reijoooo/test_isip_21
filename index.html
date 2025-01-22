@@ -5,17 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
     <title>Гурман Маркет</title>
 
-    <!-- FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="assets/fonts/ChampagneLimousines/style.css" />
 
-    <!-- LIB -->
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/swiper-bundle.min.css" />
 
-    <!-- STYLES FOR SITE -->
     <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
@@ -133,7 +130,7 @@
                                 </h1>
                                 <p class="lead mt-3">Знайте - морепродуктов!</p>
                                 <div class="d-flex align-items-center mt-5 catalog-btn">
-                                    <a href="#catalog" class="btn btn-secondary btn-lg px-5 py-3">Перейти в каталог</a>
+                                    <a href="./catalog.html" class="btn btn-secondary btn-lg px-5 py-3">Перейти в каталог</a>
                                     <div class="d-flex swiper-buttons">
                                         <div class="swiper-button-prev"></div>
                                         <div class="swiper-button-next"></div>
@@ -148,7 +145,7 @@
                                 </h1>
                                 <p class="lead mt-3">Знайте - морепродуктов!</p>
                                 <div class="d-flex align-items-center mt-5 catalog-btn">
-                                    <a href="#catalog" class="btn btn-secondary btn-lg px-5 py-3">Перейти в каталог</a>
+                                    <a href="./catalog.html" class="btn btn-secondary btn-lg px-5 py-3">Перейти в каталог</a>
                                     <div class="d-flex swiper-buttons">
                                         <div class="swiper-button-prev"></div>
                                         <div class="swiper-button-next"></div>
@@ -211,54 +208,45 @@
             </section>
 
             
-            <section class="recipes container-xl">
-                <div class="recepies-navigation">
-                    <h2 class="recepies-navigation__title">Рецепты</h2>
-                    <div class="recepies-navigation__controles">
-                        <a class="recepies-navigation__controles-btn swiper-button-prev-recepies"><img src="assets/icons/button-arrow-back.svg" alt="button-arrow-back"></a>
-                        <a class="recepies-navigation__controles-btn swiper-button-next-recepies"><img src="assets/icons/button-arrow-next.svg" alt="button-arrow-next"></a>
+            <section class="container-xl">
+                <div class="d-flex justify-content-between mb-3">
+                    <h2>Рецепты</h2>
+                    <div class="d-flex gap-2">
+                        <div class="recepies-button-prev"><img src="assets/icons/button-arrow-back.svg" alt="button-arrow-back"></div>
+                        <div class="recepies-button-next"><img src="assets/icons/button-arrow-next.svg" alt="button-arrow-next"></div>
                     </div>
                 </div>
-            
-                <div class="swiper recepies">
+                <div class="swiper swiper-recepies">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide recepies-card">
                             <img class="recepies-card__img" src="./assets/images/Rectangle 789-1.jpg" alt="recepies-1">
-                            <p class="recepies-card__name">Рецепт соуса 
-                                для приготовления форели
-                            </p>
+                            <p class="recepies-card__name">Рецепт соуса для приготовления форели</p>
                         </div>
-            
                         <div class="swiper-slide recepies-card">
-                            <img class="recepies-card__img" src="./assets/images/Rectangle 789.jpg" alt="recepies-1">
-                            <p class="recepies-card__name">Рецепт блюда из форели 
-                                и лангустина
-                            </p>
+                            <img class="recepies-card__img" src="./assets/images/Rectangle 789.jpg" alt="recepies-2">
+                            <p class="recepies-card__name">Рецепт блюда из форели и лангустина</p>
                         </div>
-            
                         <div class="swiper-slide recepies-card">
-                            <img class="recepies-card__img" src="./assets/images/Rectangle 789-2.jpg" alt="recepies-1">
-                            <p class="recepies-card__name">Мезе с добавлением морепродуктов
-                            </p>
+                            <img class="recepies-card__img" src="./assets/images/Rectangle 789-2.jpg" alt="recepies-3">
+                            <p class="recepies-card__name">Тилапия на подушке из нежнейшего соуса</p>
                         </div>
-            
                         <div class="swiper-slide recepies-card">
-                            <img class="recepies-card__img" src="./assets/images/Rectangle 789-3.jpg" alt="recepies-1">
-                            <p class="recepies-card__name">Мезе с добавлением морепродуктов
-                            </p>
+                            <img class="recepies-card__img" src="./assets/images/Rectangle 789-3.jpg" alt="recepies-4">
+                            <p class="recepies-card__name">Мезе с добавлением морепродуктов</p>
                         </div>
-            
                         <div class="swiper-slide recepies-card">
-                            <img class="recepies-card__img" src="./assets/images/Rectangle 789-4.jpg" alt="recepies-1">
-                            <p class="recepies-card__name">Как вкусно приготовить щупальца осьминога
-                            </p>
+                            <img class="recepies-card__img" src="./assets/images/Rectangle 789-4.jpg" alt="recepies-5">
+                            <p class="recepies-card__name">Как вкусно приготовить щупальца осьминога</p>
+                        </div>
+                        <div class="swiper-slide recepies-card">
+                            <img class="recepies-card__img" src="./assets/images/Rectangle 789-1.jpg" alt="recepies-6">
+                            <p class="recepies-card__name">Ещё один рецепт форели</p>
                         </div>
                     </div>
                 </div>
             </section>
             
 
-            <!-- FAQ -->
             <section class="container-xl">
                 <h4 class="mb-4">FAQ</h4>
                 <div class="accordion" id="faqAccordion">
@@ -270,7 +258,7 @@
                         </h2>
                         <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
                             <div class="accordion-body">
-                                Ответ на вопрос 1. Здесь может быть ответ, но его нет.
+                                Да
                             </div>
                         </div>
                     </div>
@@ -282,7 +270,7 @@
                         </h2>
                         <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
                             <div class="accordion-body">
-                                Если бы мы знали что это такое, мы не знаем что это такое
+                                Десять минут пятого 
                             </div>
                         </div>
                     </div>
@@ -294,7 +282,7 @@
                         </h2>
                         <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
                             <div class="accordion-body">
-                                В жизни есть вопросы и поважнее
+                                300 рублей
                             </div>
                         </div>
                     </div>
@@ -306,14 +294,14 @@
                         </h2>
                         <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#faqAccordion">
                             <div class="accordion-body">
-                                Мы посмотрим по ситуации
+                                Да
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <!-- map -->
+            
             <section class="d-flex justify-content-between">
                 <div class="row h-100 w-100" style="min-height: 470px;">
                     <div class="background-card col-12 col-md-5 d-flex align-items-center" style="background-image: url('./assets/images/about-bg.jpg');">
@@ -393,30 +381,8 @@
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/swiper-bundle.min.js"></script>
 
-    <!-- SCRIPT FOR SITE -->
+
     <script src="js/scripts.js"></script>
-    <script>
-        const swiper = new Swiper('.swiper-container', {
-            slidesPerView: 1,
-            effect: 'fade',
-            allowTouchMove: false,
-            slideToClickedSlide: false,
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-        });
     
-        function toggleDropdown(event) {
-            event.preventDefault();
-            const dropdownMenu = event.target.nextElementSibling;
-    
-            if (dropdownMenu) {
-                dropdownMenu.classList.toggle('show');
-            } else {
-                console.error('Dropdown menu not found');
-            }
-        }
-    </script>
 </body>
 </html>
