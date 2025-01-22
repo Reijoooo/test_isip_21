@@ -7,3 +7,183 @@ font-family: "Champagne & Limousines", sans-serif;
 :root {
     --bs-body-font-family: "Raleway", sans-serif;
 }
+
+* {
+    box-sizing: border-box;
+}
+
+section {
+    margin-top: 60px;
+}
+
+h4 {
+    font-weight: 300;
+    color: #393E51;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+header {
+    position: sticky;
+    z-index: 100;
+    background-color: white;
+    top: 0;
+}
+
+main {
+    flex: 1;
+}
+
+footer {
+    padding: 40px 0;
+    text-align: center;
+    color: white;
+    background-color: #3D518C; 
+}
+
+h4 {
+    font-weight: 300;
+    color: #393E51;
+}
+
+.icon {
+    width: 30px;
+    padding-right: 5px;
+}
+
+.link {
+    color: black;
+    text-decoration: none;
+}
+
+.nav-link {
+    color: #393E51;
+}
+
+.nav-link--light {
+    color: white;
+    font-size: 0.9em;
+    font-weight: 300;
+    line-height: 1.7;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.btn-primary {
+    background-color: #3D518C; 
+    border: none;
+}
+
+.img-box {
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+@media (max-width: 768px) {
+    .img-box {
+        min-width: 100%;
+        min-height: 300px;
+    }
+}
+
+
+/* header */
+.logo {
+    max-width: 70px;
+    margin-right: 10px;
+}
+
+@media (min-width: 768px) {
+    .logo {
+        max-width: 100px;
+    }
+}
+
+.dropdown-menu {
+    border: none;
+    outline: none;
+}
+
+.search-input-wrapper {
+    position: relative;
+    width: fit-content;
+}
+
+.search-input {
+    width: 600px;
+    padding: 11px;
+}
+
+.search-icon {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.navbar-toggler {
+    background-color: white;
+}
+
+.navbar-toggler:hover,
+.navbar-toggler:active,
+.navbar-toggler:focus-visible,
+.navbar-toggler:focus {
+    border: none;
+    outline: none;
+    background-color: white!important;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='%233D518C' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+.search-icon img {
+    width: 20px;
+    height: 20px;
+}
+
+.static-dropdown {
+    display: none;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.static-dropdown.show {
+    display: block;
+}
+
+.background-card {
+    padding: 140px;
+    background-image: url('../assets/images/about-bg.jpg');
+}
+
+@media (max-width: 1200px) {
+    .background-card {
+        padding: 60px; 
+    }
+}
+
+@media (max-width: 746px) {
+    .background-card {
+        padding: 30px; 
+    }
+}
+

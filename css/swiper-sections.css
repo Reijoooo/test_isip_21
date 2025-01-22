@@ -1,0 +1,127 @@
+.hero-section {
+    height: 80vh;
+    background-size: cover;
+    background-position: center;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0;
+    color: white;
+    display: flex;
+}
+
+.swiper-pagination {
+    opacity: 0;
+}
+
+.swiper-buttons {
+    padding-left: 15px;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    position: static;
+    color: #fff;
+    border-radius: 50%;
+    width: 55px;
+    height: 55px;
+    border: 1px solid #fff;
+    margin: 0 7px;
+}
+
+.swiper-button-next {
+    padding-right: 10px;
+}
+
+.swiper-button-prev {
+    padding-left: 10px;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+    content: '';
+    height: 18px;
+    width: 18px;
+    border: solid #fff;
+    border-width: 0 2px 2px 0;
+    border-radius: 1px;
+}
+
+.swiper-button-next::after {
+    transform: rotate(-45deg);
+}
+
+.swiper-button-prev::after {
+    transform: rotate(135deg);
+}
+
+@media (max-width: 991px) {
+    .hero-section {
+        align-items: center !important;
+        padding-top: 50px;
+        text-align: center;
+        justify-content: flex-start;
+    }
+
+    .swiper-pagination {
+        position: static;
+        opacity: 1;
+    }
+
+    .swiper-buttons {
+        padding-left: 0;
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        display: none;
+    }
+
+    .catalog-btn {
+        justify-content: center !important;
+    }
+}
+
+
+.shrimp-card {
+    position: relative;
+    width: 260px;
+    height: 425px;
+    overflow: hidden;
+    padding: 10px 20px;
+    border: 2px solid rgb(226, 224, 224);
+    border-radius: 20px;
+}
+
+.shrimp-card__discount {
+    background-color: #3D518C;
+    color: #fff;
+    padding: 3px 10px;
+    width: 50px;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.shrimp-card__status {
+    background-color: rgb(224, 220, 220); 
+    font-size: 16px;
+    border-radius: 5px; 
+    color: #3D518C;
+}
+
+.text-price {
+    color: #3D518C;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.text-last-price {
+    text-decoration: line-through;
+}
+
+.icon-cart {
+    cursor: pointer;
+    bottom: 10px;
+    right: 10px;
+    position: absolute;
+}
