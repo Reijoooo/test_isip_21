@@ -18,10 +18,12 @@
     <!-- STYLES FOR SITE -->
     <link rel="stylesheet" href="css/styles.css" />
     <link rel="stylesheet" href="css/marquee.css" />
+    <link rel="stylesheet" href="css/swiper-sections.css" />
+    <link rel="stylesheet" href="css/recipes.css" />
 </head>
 <body>
     <div class="wrapper">
-        <!-- header -->
+        <!-- HEADER -->
         <div class="container-xl d-none d-lg-block">
             <div class="py-3 d-flex justify-content-between flex-column-reverse flex-lg-row">
                 <div class="d-flex flex-column flex-lg-row">
@@ -43,8 +45,8 @@
                 </nav>
             </div>
         </div>
-        <header class="header container-xl">
-            <nav class="navbar navbar-expand-lg">
+        <header class="header">
+            <nav class="navbar navbar-expand-lg container-xl">
                 <div class="d-flex align-items-center">
                     <button class="navbar-toggler btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu" aria-controls="offcanvasMenu" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
@@ -123,10 +125,123 @@
             </div>
         </div>
     
-        <!-- main -->
+        <!-- MAIN -->
         <main class="main">
+            <!-- BANNER -->
+            <section>
+                <div class="swiper-container my-4">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide hero-section" style="background-image: url('../assets/images/main-page.jpg');">
+                            <div class="container-xl">
+                                <h1 class="display-4 fw-medium d-flex flex-column">
+                                    <span class="text-accent">Если хочется чего-то,</span> но не понятно чего
+                                </h1>
+                                <p class="lead mt-3">Знайте - морепродуктов!</p>
+                                <div class="d-flex align-items-center mt-5 catalog-btn">
+                                    <a href="#catalog" class="btn btn-light btn-lg px-5 py-3">Перейти в каталог</a>
+                                    <div class="d-flex swiper-buttons">
+                                        <div class="swiper-button-prev"></div>
+                                        <div class="swiper-button-next"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide hero-section" style="background-image: url('../assets/images/main-page-1.jpg');">
+                            <div class="container-xl">
+                                <h1 class="display-4 fw-medium d-flex flex-column">
+                                    <span class="text-accent">Если хочется чего-то,</span> но не понятно чего
+                                </h1>
+                                <p class="lead mt-3">Знайте - морепродуктов!</p>
+                                <div class="d-flex align-items-center mt-5 catalog-btn">
+                                    <a href="#catalog" class="btn btn-light btn-lg px-5 py-3">Перейти в каталог</a>
+                                    <div class="d-flex swiper-buttons">
+                                        <div class="swiper-button-prev"></div>
+                                        <div class="swiper-button-next"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             <!-- marquee -->
-            
+            <div class="marquee">
+                <div class="marquee-content">
+                    <p>Акция месяца – скидка 10% на всю консервацию</p>
+                    <p>Акция месяца – скидка 10% на всю консервацию</p>
+                    <p>Акция месяца – скидка 10% на всю консервацию</p>
+                    <p>Акция месяца – скидка 10% на всю консервацию</p>
+                </div>
+            </div>
+
+            <!-- ABOUT US -->
+            <section class="about-us d-flex justify-content-between">
+                <div class="row h-100 w-100 " style="min-height: 470px;">
+                    <div class="background-card col-md-6 position-relative" style="background-image: url('./assets/images/about-bg.jpg');">
+                        <div class="text-container text-start">
+                            <h2 class="mb-4" >О нас</h2>
+                            <p>ГурманМаркет это сервис по доставке охлажденной рыбы, морепродуктов, деликатесов и многого другого к вам домой. <br> <br> Рыбку чистим, режем упаковываем и привозим в удобное вам время. <br> <br> Теперь, чтоб приготовить ужин, не нужно ездить по магазинам в поисках качественных продуктов. Мы уже это сделали.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 position-relative p-0 img-box" style="background-image: url('./assets/images/about-photo.jpg');">
+                    </div>
+                </div>
+            </section>
+
+            <!-- QUESTION -->
+            <section class="about-us d-flex justify-content-between">
+                <div class="row h-100 w-100 " style="min-height: 470px;">
+                    <div class="col-md-7 position-relative p-0 img-box" style="background-image: url('./assets/images/question.png');">
+                    </div>
+                    <div class="background-card col-md-5 position-relative" style="background-image: url('./assets/images/about-bg.jpg');">
+                        <div class="text-container text-start">
+                            <h2 class="mb-4" >Остались вопросы?</h2>
+                                <p>Оставьте свои контактные данные и наши менеджеры свяжутся с вами в ближайшее время</p>
+                                <a href="#" class="btn btn-primary">Задать вопрос</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- recipes -->
+            <section class="container-xl">
+                <div class="d-flex justify-content-between mb-3">
+                    <h2>Рецепты</h2>
+                    <div class="d-flex gap-2">
+                        <div class="recepies-button-prev"><img src="assets/icons/button-arrow-back.svg" alt="button-arrow-back"></div>
+                        <div class="recepies-button-next"><img src="assets/icons/button-arrow-next.svg" alt="button-arrow-next"></div>
+                    </div>
+                </div>
+                <div class="swiper swiper-recepies">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide recepies-card">
+                            <img class="recepies-card__img" src="./assets/images/Rectangle 789-1.jpg" alt="recepies-1">
+                            <p class="recepies-card__name">Рецепт соуса для приготовления форели</p>
+                        </div>
+                        <div class="swiper-slide recepies-card">
+                            <img class="recepies-card__img" src="./assets/images/Rectangle 789.jpg" alt="recepies-2">
+                            <p class="recepies-card__name">Рецепт блюда из форели и лангустина</p>
+                        </div>
+                        <div class="swiper-slide recepies-card">
+                            <img class="recepies-card__img" src="./assets/images/Rectangle 789-2.jpg" alt="recepies-3">
+                            <p class="recepies-card__name">Тилапия на подушке из нежнейшего соуса</p>
+                        </div>
+                        <div class="swiper-slide recepies-card">
+                            <img class="recepies-card__img" src="./assets/images/Rectangle 789-3.jpg" alt="recepies-4">
+                            <p class="recepies-card__name">Мезе с добавлением морепродуктов</p>
+                        </div>
+                        <div class="swiper-slide recepies-card">
+                            <img class="recepies-card__img" src="./assets/images/Rectangle 789-4.jpg" alt="recepies-5">
+                            <p class="recepies-card__name">Как вкусно приготовить щупальца осьминога</p>
+                        </div>
+                        <div class="swiper-slide recepies-card">
+                            <img class="recepies-card__img" src="./assets/images/Rectangle 789-1.jpg" alt="recepies-6">
+                            <p class="recepies-card__name">Ещё один рецепт форели</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
             <!-- FAQ -->
             <section class="container-xl">
@@ -183,15 +298,15 @@
                 </div>
             </section>
 
-            <!-- map -->
+            <!-- MAP -->
             <section class="d-flex justify-content-between">
-                <div class="row h-100 w-100" style="min-height: 470px;">
-                    <div class="background-card col-12 col-md-5 d-flex align-items-center" style="background-image: url('./assets/images/about-bg.jpg');">
+                <div class="row h-100 w-100" style="min-height: 468px;">
+                    <div class="background-card d-flex align-items-center col-12 col-md-5">
                         <div class="text-container text-start p-4">
                             <h2 class="mb-4">Контакты</h2>
                             <p>г. Екатеринбург ул. Шефская д. 101</p>
-                            <p>+7 (922) 181 36 75</p>
-                            <p>+7 (922) 201 95 20</p>
+                            <p><a class="link" href="tel:+79221813675">+7 (922) 181 36 75</a></p>
+                            <p><a class="link" href="tel:+79222019520">+7 (922) 201 95 20</a></p>
                             <div>
                                 <img class="icon me-3" src="./assets/icons/telegram-dark.svg" alt="telegram">
                                 <img class="icon" src="./assets/icons/vk-dark.svg" alt="vk">
@@ -212,11 +327,11 @@
             </section>
         </main>
 
-        <!-- footer -->
+        <!-- FOOTER -->
         <footer class="footer">
             <div class="container-xl">
-                <div class="row text-center justify-content-between text-lg-start">
-                    <div class="col-12 col-lg-2 d-flex flex-column justify-content-between mb-2">
+                <div class="row justify-content-between text-lg-start text-center">
+                    <div class="col-12 justify-content-between mb-2  col-lg-2 d-flex flex-column">
                         <img class="logo" src="./assets/images/logo-light.png" alt="logo">
                         <p class="small" style="font-size: 0.7rem; font-weight: 300;">Paspaботано в <a href="#" class="text-white">LOBUT DIGITAL</a></p>
                     </div>
@@ -270,8 +385,46 @@
 </html>
 
 <script>
-    // я не знаю как на бутстрапе сделать дропдаун как там
-    function toggleDropdown(event) {
+    document.addEventListener('DOMContentLoaded', function () {
+        const heroSwiper = new Swiper('.swiper-container', {
+            slidesPerView: 1,
+            effect: 'fade',
+            allowTouchMove: false,
+            slideToClickedSlide: false,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+
+        
+        const swiper2Config = {
+            loop: true,
+            spaceBetween: 30,
+            navigation: {
+                nextEl: '.recepies-button-next',
+                prevEl: '.recepies-button-prev',
+            },
+            breakpoints: {
+                0: {
+                    slidesPerView: 1,
+                },
+                576: {
+                    slidesPerView: 3,
+                },
+                768: {
+                    slidesPerView: 4,
+                },
+                992: {
+                    slidesPerView: 5,
+                },
+            }
+        };
+
+        const _swiper2 = new Swiper('.swiper-recepies', swiper2Config);
+    });
+
+    function toggleDropdownMenu(event) {
         event.preventDefault();
         const dropdownMenu = event.target.nextElementSibling;
 
@@ -281,4 +434,5 @@
             console.error('Dropdown menu not found');
         }
     }
+
 </script>
